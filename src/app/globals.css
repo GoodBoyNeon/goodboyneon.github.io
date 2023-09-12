@@ -2,26 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-color: #140821;
+    --background-color-lighter: #250f3e;
+    --accent-color: #a4c4db;
+    /* --accent-color: #f3f3e1; */
+    --selection-color: 164, 196, 219, 0.5;
+    --primary-darker: #6e8e9b;
   }
 }
 
+@layer components {
+  .tooltip {
+    @apply absolute w-auto p-2 max-w-[40rem] shadow-md text-white bg-background-light text-xs font-bold transition-all duration-100 origin-top scale-0;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0 auto;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-darker);
+}
+
+::selection {
+  background: rgba(var(--selection-color));
+  /* color: var(--accent-color-darker); */
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background-color);
 }
