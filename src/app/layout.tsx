@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Fira_Sans } from "next/font/google";
+import { Overlays } from "../components";
 
 const font = Fira_Sans({
   subsets: ["latin"],
@@ -19,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-background`}>{children}</body>
+      <body className={`${font.className} bg-background`}>
+        <Overlays />
+        {children}
+      </body>
     </html>
   );
 }

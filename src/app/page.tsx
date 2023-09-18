@@ -1,10 +1,15 @@
-import { Hero, Overlays } from "@components";
+"use client";
+
+import { Hero } from "@components";
+import About from "../components/About";
+import StarsCanvas from "../components/stars/Canvas";
 
 export default function Home() {
   return (
     <div>
-      <Overlays />
+      <StarsCanvas />
       <Hero />
+      <About />
     </div>
   );
 }

@@ -15,9 +15,12 @@ const config: Config = {
       },
       colors: {
         white: "#f0f8ff",
+        subtext: "#94a3b8",
         primary: "#f3f3e1",
         background: "#140821",
-        "background-light": "#675f72",
+        // "background-light": "#675f72",
+        tooltipColor: "#572390",
+        // "background-light": "#250f3e",
       },
       spacing: {
         std: "2rem",

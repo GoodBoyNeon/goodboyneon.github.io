@@ -13,12 +13,6 @@
   }
 }
 
-@layer components {
-  .tooltip {
-    @apply absolute w-auto p-2 max-w-[40rem] shadow-md text-white bg-background-light text-xs font-bold transition-all duration-100 origin-top scale-0;
-  }
-}
-
 *,
 *::before,
 *::after {

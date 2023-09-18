@@ -1,17 +1,19 @@
 "use client";
 import Image from "next/image";
-import dots from "../../public/dots.png";
-import vector from "../../public/marketing-ploy-co.9f39ed56.webp";
+import vector from "../../public/vector.webp";
 import Tooltip from "./Tooltip";
+// import dots from "../../public/dots.png";
 
 const Hero = () => {
   return (
     <>
+      {/*
       <Image
         src={dots}
         className="absolute top-0 bottom-0 m-auto left-[49%]"
         alt="dots"
       ></Image>
+         */}
       <main className={`flex flex-col justify-center h-screen w-screen`}>
         <h1 className={`px-6 text-white font-extrabold text-5xl`}>
           Neon The{" "}
@@ -21,8 +23,7 @@ const Hero = () => {
         </h1>
         <p className="text-xl text-white px-6 py-4 w-[45%]">
           A dedicated{" "}
-          {/*<Tooltip tooltip="A computer programmer, sometimes referred to as a software developer, a software engineer, a programmer or a coder, is a person who creates computer programs. - Wikipedia, too lazy to write it myself">*/}
-          <Tooltip tooltip="My cool tooltip!">
+          <Tooltip tooltip="refer to Wikipedia for definition, I'm lazy ;)">
             <span className="text-primary">programmer</span>
           </Tooltip>{" "}
           with a penchant for turning ideas into reality through elegant lines

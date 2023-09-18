@@ -13,7 +13,7 @@ const Overlays = () => {
           NEON
         </Link>
         <Link
-          className={`absolute m-std top-0 right-0 text-xl text-white font-medium bg-transparent border-2 border-solid rounded-md cursor-pointer px-8 py-2 hover:bg-white hover:text-background transition-all ease-in-out duration-300`}
+          className={`absolute m-std top-0 right-0 text-xl text-white font-medium bg-transparent border-2 border-solid rounded-md cursor-pointer px-8 py-2 hover:bg-white hover:text-background hover:rounded-3xl transition-all ease-in-out duration-150`}
           href="#contact"
         >
           Contact
