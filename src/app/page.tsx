@@ -7,7 +7,7 @@ import StarsCanvas from "../components/stars/Canvas";
 export default function Home() {
   return (
     <div>
-      {/*<StarsCanvas />*/}
+      <StarsCanvas />
       <Hero />
       <About />
     </div>
