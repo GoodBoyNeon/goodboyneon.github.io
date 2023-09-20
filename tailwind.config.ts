@@ -21,7 +21,7 @@ const config: Config = {
         specialText: "#f3f3e1",
         background: "#140821",
         // "background-light": "#675f72",
-        tooltipColor: "#572390",
+        tooltipColor: "#675f72",
         // "background-light": "#250f3e",
       },
       spacing: {
