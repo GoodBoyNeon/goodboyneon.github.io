@@ -2,6 +2,7 @@
 import Image from "next/image";
 import vector from "../../public/vector.webp";
 import Tooltip from "./Tooltip";
+import Highlight from "./Highlight";
 // import dots from "../../public/dots.png";
 
 const Hero = () => {
@@ -21,10 +22,10 @@ const Hero = () => {
             Developer
           </span>
         </h1>
-        <p className="text-xl text-white px-6 py-4 w-[45%]">
+        <p className="text-xl text-text px-6 py-4 w-[45%]">
           A dedicated{" "}
           <Tooltip tooltip="refer to Wikipedia for definition, I'm lazy ;)">
-            <span className="text-primary">programmer</span>
+            <span>programmer</span>
           </Tooltip>{" "}
           with a penchant for turning ideas into reality through elegant lines
           of code. Embracing challenges and seeking innovative solutions in the

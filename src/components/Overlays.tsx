@@ -5,7 +5,7 @@ import React from "react";
 const Overlays = () => {
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 h-12 flex justify-between items-start">
+      <div className="z-10 fixed top-0 left-0 right-0 flex justify-between items-start">
         <Link
           className={`absolute top-0 m-std left-0 text-white font-black text-4xl tracking-widest`}
           href="/"
@@ -13,7 +13,7 @@ const Overlays = () => {
           NEON
         </Link>
         <Link
-          className={`absolute m-std top-0 right-0 text-xl text-white font-medium bg-transparent border-2 border-solid rounded-md cursor-pointer px-8 py-2 hover:bg-white hover:text-background hover:rounded-3xl transition-all ease-in-out duration-150`}
+          className={`absolute m-std top-0 right-0 text-xl text-white font-medium bg-transparent border-2 border-solid rounded-md cursor-pointer px-8 py-2 hover:bg-white hover:text-background hover:rounded-3xl transition-all ease-in-out duration-150 backdrop-blur-md`}
           href="#contact"
         >
           Contact

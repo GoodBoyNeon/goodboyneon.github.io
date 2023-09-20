@@ -30,9 +30,9 @@ html {
 
 ::selection {
   background: rgba(var(--selection-color));
-  /* color: var(--accent-color-darker); */
 }
 
-body {
-  background: var(--background-color);
+section {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
