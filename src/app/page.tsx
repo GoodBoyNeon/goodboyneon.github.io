@@ -9,7 +9,8 @@ export default function Home() {
   const prefersReducedMotion = useReducedMotion();
   return (
     <div>
-      {/*{!prefersReducedMotion && <StarsCanvas />}*/}
+      {!prefersReducedMotion && <StarsCanvas />}
+      <RedirectModal />
       <Hero />
       <About />
       <Skills />
