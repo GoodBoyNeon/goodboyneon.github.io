@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const NotFound = () => {
@@ -8,9 +9,9 @@ const NotFound = () => {
       </h1>
       <p className="text-subtext">
         We cannot find the page you&apos;re looking for, sorry about that!{" "}
-        <a className="underline text-primary" href="/">
+        <Link className="underline text-primary" href="/">
           Click here to get back!
-        </a>
+        </Link>
       </p>
     </div>
   );

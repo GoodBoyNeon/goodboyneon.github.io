@@ -4,10 +4,8 @@
 
 @layer base {
   :root {
-    --background-color: #140821;
-    --background-color-lighter: #250f3e;
     --accent-color: #a4c4db;
-    /* --accent-color: #f3f3e1; */
+    --color-primary: #00c6bc;
     --selection-color: 164, 196, 219, 0.5;
     --primary-darker: #6e8e9b;
   }

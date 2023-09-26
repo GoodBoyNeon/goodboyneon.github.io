@@ -1,3 +1,4 @@
+"use client";
 import React, { useMemo, useRef } from "react";
 import { useTexture } from "@react-three/drei";
 import { BufferAttribute, Points } from "three";
@@ -22,11 +23,8 @@ const Scene = () => {
     state.camera.position.set(top * -0.002, top * -0.002, top * -0.08);
   });
 
-  // <perspectiveCamera position={[-3, 0, 30]} />
   return (
     <>
-      {/* Light */}
-      {/*<ambientLight color={"#ffffff"} intensity={0.2} />*/}
       {/* Mesh */}
       <points ref={mesh}>
         <bufferGeometry>

@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const RedirectModal = () => {
@@ -20,12 +22,12 @@ const RedirectModal = () => {
           >
             No, Stay here
           </button>
-          <a
+          <Link
             href="https://v1.neon.is-a.dev"
             className="cursor-pointer m-4 bg-white p-4 rounded border border-white hover:bg-opacity-75"
           >
             Yes, Take me to the old one
-          </a>
+          </Link>
         </div>
       </div>
     </div>
