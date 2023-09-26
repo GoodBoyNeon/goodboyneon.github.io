@@ -33,7 +33,7 @@ const Scene = () => {
         <pointsMaterial
           color={"#94a3b8"}
           size={0.7}
-          opacity={0.3}
+          opacity={0.1}
           map={starMap}
         />
       </points>
