@@ -1,15 +1,13 @@
 'use client';
 
-import { Hero, About, StarsCanvas, RedirectModal, Skills } from '@components';
+import { Hero, About, Stars, Contact, Footer, RedirectModal, Skills, Projects } from '@components';
 import { useReducedMotion } from '../hooks/useReducedMoton';
-import Contact from '../components/sections/Contact';
-import Footer from '../components/Footer';
 
 export default function Home() {
   const prefersReducedMotion = useReducedMotion();
   return (
     <div>
-      {!prefersReducedMotion && <StarsCanvas />}
+      {/*{!prefersReducedMotion && <Stars />}*/}
       <RedirectModal />
       <Hero />
       <About />
@@ -17,6 +15,7 @@ export default function Home() {
       {/* 
         TODO: ADD PROJECTS
       */}
+      <Projects />
       <Contact />
       <Footer />
     </div>
