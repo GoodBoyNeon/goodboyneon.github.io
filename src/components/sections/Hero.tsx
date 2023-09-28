@@ -28,11 +28,10 @@ const Hero = () => {
         <div className="m-0 w-[45%]">
           <RevealAnimation>
             <p className="px-6 py-4 text-xl text-text">
-              A dedicated{' '}
-              <Highlight>programmer</Highlight>
-              with a penchant for turning ideas into reality through elegant lines of
-              code. Embracing challenges and seeking innovative solutions in the
-              ever-evolving landscape of technology.
+              A dedicated <Highlight>programmer</Highlight> with a penchant for
+              turning ideas into reality through elegant lines of code. Embracing
+              challenges and seeking innovative solutions in the ever-evolving
+              landscape of technology.
             </p>
           </RevealAnimation>
         </div>
