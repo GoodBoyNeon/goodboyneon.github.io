@@ -20,7 +20,7 @@ const Hero = () => {
         <RevealAnimation>
           <h1 className={`px-6 text-5xl font-extrabold text-white`}>
             Neon The{' '}
-            <span className="before:ease relative before:absolute before:bottom-[-2px] before:h-[3px] before:w-0 before:bg-primary before:transition-all before:duration-300 before:content-[''] hover:before:w-full">
+            <span className="bg-gradient-to-r from-primary to-specialText bg-[size:0%_8px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 ease-in hover:bg-[size:100%_8px]">
               Developer
             </span>
           </h1>
@@ -29,9 +29,7 @@ const Hero = () => {
           <RevealAnimation>
             <p className="px-6 py-4 text-xl text-text">
               A dedicated{' '}
-              <Tooltip tooltip="refer to Wikipedia for definition, I'm lazy ;)">
-                <Highlight>programmer</Highlight>
-              </Tooltip>{' '}
+              <Highlight>programmer</Highlight>
               with a penchant for turning ideas into reality through elegant lines of
               code. Embracing challenges and seeking innovative solutions in the
               ever-evolving landscape of technology.
