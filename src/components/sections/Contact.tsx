@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { BiLogoDiscordAlt, BiLogoGithub, BiLogoTwitter } from 'react-icons/bi';
-import { FadeUpAnimation, Section, SectionHeader } from '..';
+import { Button, FadeUpAnimation, Section, SectionHeader } from '..';
 
 const Contact = () => {
   return (
@@ -13,14 +13,21 @@ const Contact = () => {
           are always open to greet you!
         </p>
         <div className="flex items-center justify-center pt-4">
-          <Link
-            href={
-              'mailto:hello@neon.is-a.dev?subject=Sent%20from%20neon.is-a.dev%3A%20'
-            }
-            className="w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+          {/* <Link */}
+          {/*   href={ */}
+          {/*     'mailto:hello@neon.is-a.dev?subject=Sent%20from%20neon.is-a.dev%3A%20' */}
+          {/*   } */}
+          {/*   className="w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none" */}
+          {/* > */}
+          {/*   Say Hi! */}
+          {/* </Link> */}
+          <Button
+            type="Link"
+            style="Secondary"
+            href="mailto:hello@neon.is-a.dev?subject=Sent%20from%20neon.is-a.dev%3A%20"
           >
             Say Hi!
-          </Link>
+          </Button>
         </div>
         <div className="mt-4 flex flex-row-reverse">
           <Link href={'https://github.com/GoodBoyNeon'} className="m-1">

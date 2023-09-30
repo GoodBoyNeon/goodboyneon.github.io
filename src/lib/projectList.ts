@@ -7,7 +7,7 @@ export const majorProjects: Project[] = [
       "Cheeka (aka Cheekuneo) is a Discord Bot I develop for IGP's Discord Server. It's a team-project, but I've put in remarkable efforts into the codebase!",
     githubUrl: 'https://github.com/ImagineGamingPlay/Cheeka-Development',
     image: './projectImages/cheekuneo.png',
-    tags: ['Discord Bot', 'Discord.js', 'Typescript'],
+    tags: ['TypeScript'],
   },
   {
     name: 'Cheekuneo',
@@ -15,7 +15,15 @@ export const majorProjects: Project[] = [
       "Cheeka (aka Cheekuneo) is a Discord Bot I develop for IGP's Discord Server. It's a team-project, but I've put in remarkable efforts into the codebase!",
     githubUrl: 'https://github.com/ImagineGamingPlay/Cheeka-Development',
     image: './projectImages/cheekuneo.png',
-    tags: ['Discord Bot', 'Discord.js', 'Typescript'],
+    tags: [
+      'Discord Bot',
+      'Discord.js',
+      'Typescript',
+      'Lorem',
+      'Ispum',
+      'abcd',
+      'sometag',
+    ],
   },
   {
     name: 'Console Wizard',

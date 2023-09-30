@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    /* --color-text: #ccd6f6; */
     --color-white: #f0f8ff;
     --color-text: #b2bbd2;
     --color-subtext: #7b86a7;
@@ -20,7 +21,7 @@
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0 auto;
+  margin: 0;
 }
 
 html {
@@ -33,9 +34,4 @@ html {
 
 ::selection {
   background: rgba(var(--selection-color));
-}
-
-section {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }

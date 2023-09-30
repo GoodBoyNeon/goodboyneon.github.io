@@ -3,6 +3,7 @@ import { Project } from '../lib/types/projectTypes';
 import Link from 'next/link';
 import Image from 'next/image';
 import { JetBrainsMono, Rubik } from '../utils';
+import { Highlight } from '.';
 
 interface MajorProjectData extends Project {
   i: number;
@@ -18,7 +19,7 @@ type TagProps = {
 const Tag: FC<TagProps> = ({ tag }) => {
   return (
     <div
-      className={`${JetBrainsMono.className} rounded border px-2 py-2.5 text-xs text-subtext text-opacity-100 opacity-10`}
+      className={`${JetBrainsMono.className} rounded border border-subtext px-2 py-2 text-center text-sm text-subtext text-opacity-100`}
     >
       {tag}
     </div>
@@ -36,27 +37,32 @@ const MajorProject: FC<MajorProjectProps> = ({
           <Link
             href={visitUrl}
             target="_blank"
-            className={`duration-350 z-[1] list-none text-3xl font-extrabold text-white transition-all [counter-increment:css-counter_1] before:text-special-text before:content-[counter(css-counter)_"._"] hover:text-special-text`}
+            className={`z-[1] ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
           >
-            {name}
+            <Highlight>{name}</Highlight>
           </Link>
-          <p className="absolute inset-0 mx-[-1rem] my-4 h-min w-max max-w-[450px] rounded-lg bg-bg-light px-4 py-6 text-text">
-            {description}
-          </p>
-          {tags.map((tag, i) => {
-            return <Tag tag={tag} key={i} />;
-          })}
+          <span className="absolute inset-0 top-12">
+            <p className="my-4 h-min w-max max-w-[40vw] rounded bg-bg-light p-5 pt-7 text-text drop-shadow-bl">
+              {description}
+            </p>
+            <div className="flex w-[40vw] flex-wrap gap-2">
+              {tags.map((tag, i) => {
+                return <Tag tag={tag} key={i} />;
+              })}
+            </div>
+          </span>
+
+          {url && <Link href={url}></Link>}
+          {githubUrl && <Link href={githubUrl} target="_blank"></Link>}
         </div>
 
-        {url && <Link href={url}></Link>}
-        {githubUrl && <Link href={githubUrl} target="_blank"></Link>}
         {image && (
           <Image
             src={image}
-            width={600}
+            width={550}
             height={1}
             alt="Project Image"
-            className="z-[-2] rounded-md"
+            className="left-30 z-[-2] float-right ml-auto flex origin-right justify-end rounded-md"
           ></Image>
         )}
       </div>
