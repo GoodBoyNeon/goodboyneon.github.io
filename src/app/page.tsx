@@ -12,6 +12,7 @@ import {
 } from '@components';
 
 export default function Home() {
+  const prefersReducedMotion = useReducedMotion();
   return (
     <div>
       {!prefersReducedMotion && <Stars />}
