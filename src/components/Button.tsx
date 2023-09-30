@@ -25,7 +25,8 @@ const Button: FC<NormalButtonProps | LinkButtonProps> = props => {
   const secondaryClassName =
     'w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none';
 
-  const className = props.style === 'Primary' ? primaryClassName : secondaryClassName;
+  const className =
+    props.style === 'Primary' ? primaryClassName : secondaryClassName;
 
   if (props.type === 'Link') {
     return (
@@ -36,7 +37,7 @@ const Button: FC<NormalButtonProps | LinkButtonProps> = props => {
   }
   if (props.type === 'Normal') {
     return (
-      <button className={className} onClick={props.onClick ?? (() => { })}>
+      <button className={className} onClick={props.onClick ?? (() => {})}>
         {props.children}
       </button>
     );
