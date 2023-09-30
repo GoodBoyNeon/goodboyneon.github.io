@@ -1,10 +1,10 @@
 'use client';
 
 import { motion, useAnimation, useInView } from 'framer-motion';
-import { FC, ReactElement, useEffect, useRef } from 'react';
+import { FC, ReactNode, useEffect, useRef } from 'react';
 
 type FadeUpAnimationProps = {
-  children: ReactElement;
+  children: ReactNode;
 };
 
 const FadeUpAnimation: FC<FadeUpAnimationProps> = ({ children }) => {

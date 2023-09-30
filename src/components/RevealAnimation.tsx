@@ -4,12 +4,14 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import React, { FC, ReactElement, useEffect, useRef } from 'react';
 
 type RevealAnimationProps = {
+  delay?: number;
   width?: string;
   children: ReactElement;
 };
 
 const RevealAnimation: FC<RevealAnimationProps> = ({
   width = 'fit-content',
+  delay = 0.25,
   children,
 }) => {
   const ref = useRef<HTMLDivElement>(null);

@@ -1,6 +1,6 @@
-"use client";
-import Link from "next/link";
-import React, { useState } from "react";
+'use client';
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 const RedirectModal = () => {
   const [showModal, setShowModal] = useState(true);
@@ -8,23 +8,23 @@ const RedirectModal = () => {
     return null;
   }
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
-      <div className="z-40 flex flex-col justify-center items-center bg-tooltipColor rounded-md p-10">
-        <h2 className="text-primary text-3xl font-extrabold">Hold Up!</h2>
-        <p className="text-2xl text-white mb-4">
-          This portfolio is not complete. Do you want to visit my previous
-          portfolio instead?
+    <div className="flex h-screen w-screen items-center justify-center">
+      <div className="z-40 flex flex-col items-center justify-center rounded-md p-10">
+        <h2 className="text-3xl font-extrabold text-primary">Hold Up!</h2>
+        <p className="mb-4 text-2xl text-white">
+          This portfolio is not complete. Do you want to visit my previous portfolio
+          instead?
         </p>
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <button
-            className="rounded border border-white p-4 text-white hover:bg-white hover:text-black hover:bg-opacity-75"
+            className="rounded border border-white p-4 text-white hover:bg-white hover:bg-opacity-75 hover:text-black"
             onClick={() => setShowModal(false)}
           >
             No, Stay here
           </button>
           <Link
             href="https://v1.neon.is-a.dev"
-            className="cursor-pointer m-4 bg-white p-4 rounded border border-white hover:bg-opacity-75"
+            className="m-4 cursor-pointer rounded border border-white bg-white p-4 hover:bg-opacity-75"
           >
             Yes, Take me to the old one
           </Link>

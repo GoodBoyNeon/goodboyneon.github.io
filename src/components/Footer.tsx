@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { Octokit } from 'octokit';
 import React, { useEffect, useState } from 'react';
-import { BiGitRepoForked, BiStar } from 'react-icons/bi';
+import { BiGitRepoForked, BiLinkExternal, BiStar } from 'react-icons/bi';
+import { JetBrainsMono } from '../utils';
 
 type GitStats = {
   stars?: number;
@@ -29,23 +30,27 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="items-center justify-center bg-footerColor">
+    <footer className="bg-background">
+      <hr className="h-[1px] w-screen border-0 bg-bg-light text-bg-light" />
       <Link
-        className="flex max-w-fit flex-col text-subText transition-all duration-300 hover:text-primary"
+        className={`${JetBrainsMono.className} mt-4 flex max-w-fit flex-col text-subtext transition-all duration-300 hover:text-primary`}
         href={'https://github.com/goodboyneon/goodboyneon.github.io'}
       >
-        <p>Check it out on Github</p>
-        <div className="flex w-20 justify-between">
+        <p className="flex flex-row">
+          Check it out on Github <BiLinkExternal />
+        </p>
+        <div className="flex w-20 justify-between font-normal">
           <span className="flex flex-row">
             <BiStar />
             {stars && stars}
           </span>
           <span className="flex flex-row">
             <BiGitRepoForked />
-            {forks && `${forks}`}
+            {forks && forks}
           </span>
         </div>
       </Link>
+      <p className="pb-1 pr-2 text-right text-subtext">&copy; All rights reserved</p>
     </footer>
   );
 };
