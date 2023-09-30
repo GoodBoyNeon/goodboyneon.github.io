@@ -14,8 +14,8 @@ import {
 export default function Home() {
   return (
     <div>
-      {/*{!prefersReducedMotion && <Stars />}*/}
-      <RedirectModal />
+      {!prefersReducedMotion && <Stars />}
+      {/* <RedirectModal /> */}
       <Hero />
       <About />
       <Skills />
