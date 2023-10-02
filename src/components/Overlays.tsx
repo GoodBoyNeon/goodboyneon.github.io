@@ -1,9 +1,16 @@
 import Link from 'next/link';
+import { Dispatch, SetStateAction, useEffect } from 'react';
 import { PiGithubLogoFill } from 'react-icons/pi';
-import React from 'react';
-import { DelaGothicOne, Rubik } from '../utils';
+import { Toggle } from '.';
+import { Rubik } from '../utils';
 
-const Overlays = () => {
+const Overlays = ({
+  setRenderStars,
+  renderStars,
+}: {
+  setRenderStars: Dispatch<SetStateAction<boolean>>;
+  renderStars: boolean;
+}) => {
   return (
     <>
       <div className="fixed left-0 right-0 top-0 z-10 flex items-start justify-between">
@@ -28,6 +35,15 @@ const Overlays = () => {
         >
           <PiGithubLogoFill size="45" />
         </Link>
+        <div className="fixed bottom-0 right-0 m-std flex flex-col items-center justify-center">
+          <Toggle
+            defaultState={renderStars}
+            onClick={() => {
+              setRenderStars(!renderStars);
+            }}
+          />
+          <p className="mt-1 text-sm text-subtext">Toggle Stars</p>
+        </div>
       </div>
     </>
   );

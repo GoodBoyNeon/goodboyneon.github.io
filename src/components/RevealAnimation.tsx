@@ -11,7 +11,6 @@ type RevealAnimationProps = {
 
 const RevealAnimation: FC<RevealAnimationProps> = ({
   width = 'fit-content',
-  delay = 0.25,
   children,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -39,7 +38,8 @@ const RevealAnimation: FC<RevealAnimationProps> = ({
         initial="before"
         animate={animationControls}
         transition={{
-          duration: 0.3,
+          duration: 0.5,
+          delay: 0.25,
         }}
       >
         {children}

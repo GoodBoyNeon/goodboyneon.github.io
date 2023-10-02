@@ -1,1 +1,1 @@
-export * from "./useReducedMoton";
+export * from './useReducedMoton';

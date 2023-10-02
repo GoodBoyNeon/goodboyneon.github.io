@@ -35,3 +35,7 @@ html {
 ::selection {
   background: rgba(var(--selection-color));
 }
+
+.icon {
+  vertical-align: bottom;
+}

@@ -11,7 +11,7 @@ import {
   BiLogoTailwindCss,
   BiLogoTypescript,
 } from 'react-icons/bi';
-import { SiLua, SiNextdotjs, SiPrisma, SiSqlite } from 'react-icons/si';
+import { SiLua, SiLinux, SiNextdotjs, SiPrisma, SiSqlite } from 'react-icons/si';
 import { FadeUpAnimation, Section, SectionHeader } from '..';
 import SkillItem from '../SkillItem';
 
@@ -43,6 +43,10 @@ const Skills = () => {
 
           <SkillItem name="Tailwind CSS">
             <BiLogoTailwindCss />
+          </SkillItem>
+
+          <SkillItem name="Linux">
+            <SiLinux />
           </SkillItem>
 
           <SkillItem name="Node.js">

@@ -10,6 +10,9 @@ export { default as Section } from './Section';
 export { default as SectionHeader } from './SectionHeader';
 export { default as ToolTip } from './Tooltip';
 export { default as Button } from './Button';
+export { default as Toggle } from './Toggle';
+
+export { default as Portfolio } from './Portfolio'
 
 export { default as About } from './sections/About';
 export { default as Contact } from './sections/Contact';
