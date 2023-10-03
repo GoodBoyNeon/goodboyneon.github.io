@@ -6,6 +6,7 @@ interface BaseButtonProps {
   children: ReactNode;
   style: 'Primary' | 'Secondary';
   type: 'Link' | 'Normal';
+  className?: string;
 }
 
 interface NormalButtonProps extends BaseButtonProps {
@@ -20,24 +21,27 @@ interface LinkButtonProps extends BaseButtonProps {
 }
 
 const Button: FC<NormalButtonProps | LinkButtonProps> = props => {
-  const primaryClassName =
-    'w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none';
-  const secondaryClassName =
-    'w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none';
+  const { className = '' } = props;
+  const primaryClassName = `${className} w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none`;
+  const secondaryClassName = `${className} w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none`;
 
-  const className =
+  const buttonClassName =
     props.style === 'Primary' ? primaryClassName : secondaryClassName;
 
   if (props.type === 'Link') {
     return (
-      <Link href={props.href} className={className} target={props.target ?? '_self'}>
+      <Link
+        href={props.href}
+        className={buttonClassName}
+        target={props.target ?? '_self'}
+      >
         {props.children}
       </Link>
     );
   }
   if (props.type === 'Normal') {
     return (
-      <button className={className} onClick={props.onClick ?? (() => {})}>
+      <button className={buttonClassName} onClick={props.onClick ?? (() => {})}>
         {props.children}
       </button>
     );

@@ -8,6 +8,7 @@ export const majorProjects: Project[] = [
     githubUrl: 'https://github.com/ImagineGamingPlay/Cheeka-Development',
     image: './projectImages/cheekuneo.png',
     tags: ['Discord.js', 'TypeScript'],
+    url: 'https://youtube.com',
   },
   {
     name: 'Console Wizard',
@@ -16,5 +17,15 @@ export const majorProjects: Project[] = [
     tags: ['npm', 'TypeScript'],
     githubUrl: 'https://github.com/goodboyneon/console-wizard',
     image: './projectImages/console-wizard.png',
+    url: 'https://youtube.com',
+  },
+  {
+    name: 'Console Wizard',
+    description:
+      "A minimal yet colorful and customizable alternative to javascript's default logger. A vibrant npm package amplifying logging experiences with colorful info, success, warn, and error messages, complete with timestamps and status indicators. Bonus point, you can also print tables pretty easily using Console Wizard!",
+    tags: ['npm', 'TypeScript'],
+    githubUrl: 'https://github.com/goodboyneon/console-wizard',
+    image: './projectImages/console-wizard.png',
+    url: 'https://youtube.com',
   },
 ];
