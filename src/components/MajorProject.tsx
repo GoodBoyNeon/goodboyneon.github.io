@@ -3,15 +3,8 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import { Highlight } from '.';
-import { Project } from '../lib/types/projectTypes';
+import { ProjectProps } from '../lib/types/projectTypes';
 import { JetBrainsMono } from '../utils';
-
-interface MajorProjectData extends Project {
-  i: number;
-}
-type MajorProjectProps = {
-  project: MajorProjectData;
-};
 
 type TagProps = {
   tag: string;
@@ -27,7 +20,7 @@ const Tag: FC<TagProps> = ({ tag }) => {
   );
 };
 
-const MajorProject: FC<MajorProjectProps> = ({
+const MajorProject: FC<ProjectProps> = ({
   project: { name, description, image, tags, githubUrl = '', url, i },
 }) => {
   const visitUrl = url ? url : githubUrl;
@@ -98,7 +91,7 @@ const MajorProject: FC<MajorProjectProps> = ({
             <Link
               href={visitUrl}
               target="_blank"
-              className={`z-[1] ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
+              className={`relative right-12 z-[1] ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
             >
               <Highlight>{name}</Highlight>
             </Link>

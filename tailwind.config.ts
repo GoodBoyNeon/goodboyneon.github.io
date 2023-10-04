@@ -14,9 +14,15 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-glow':
+          'radial-gradient(800px_circle_at_100px_100px,_rgba(255,_255,_255,_0.6),_transparent_40%)',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'glass-effect-gradient':
+          'linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0))',
       },
+
+      glassEffectGradient: {},
       colors: {
         // white: '#f0f8ff',
         // // text: '#ccd6f6',
