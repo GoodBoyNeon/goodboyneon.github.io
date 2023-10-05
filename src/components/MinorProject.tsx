@@ -33,7 +33,7 @@ const MinorProject: FC<ProjectProps> = ({
     <>
       <div
         ref={project}
-        className="relative flex flex-col rounded border border-solid border-[rgba(255,_255,_255,_0.18)] bg-glass-effect-gradient p-6 backdrop-blur-md transition-opacity duration-150 [box-shadow:0_8px_32px_0_rgba(0,_0,_0,_0.2)] before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-full before:rounded-[inherit] before:bg-gradient-glow before:opacity-0 before:transition-opacity before:duration-500 before:content-[''] before:[background:radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),rgba(255,255,255,0.06),transparent_40%)] before:hover:opacity-100"
+        className="relative flex flex-col rounded border border-solid border-[rgba(255,_255,_255,_0.18)] bg-glass-effect-gradient p-6 backdrop-blur-md transition-opacity duration-150 [box-shadow:0_8px_32px_0_rgba(0,_0,_0,_0.2)] before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-20 before:h-full before:w-full before:rounded-[inherit] before:bg-gradient-glow before:opacity-0 before:transition-opacity before:duration-500 before:content-[''] before:[background:radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),rgba(255,255,255,0.06),transparent_40%)] before:hover:opacity-100"
       >
         <div>
           <p className={`text-sm text-special-text ${JetBrainsMono.className}`}>
