@@ -2,6 +2,14 @@ import { Project } from './types/projectTypes';
 
 export const majorProjects: Project[] = [
   {
+    name: 'Byte',
+    description:
+      'Byte is a public Discord Bot, which provides moderation commands and features, games, utility commands, suggestion system and much more, all with the freedom of customizability. The bot was given to me by a friend (thanks, vector!), and I develop it ever since. Add it to your server with the button below!',
+    image: './projectImages/byte.png',
+    url: 'https://discord.com/application-directory/933839241962729562',
+    tags: ['Discord.js', 'TypeScript'],
+  },
+  {
     name: 'Cheekuneo',
     description:
       "Cheeka (aka Cheekuneo) is a Discord Bot I develop for IGP's Discord Server. It's a team-project, but I've put in remarkable efforts into the codebase!",

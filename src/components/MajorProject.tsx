@@ -25,7 +25,7 @@ const MajorProject: FC<ProjectProps> = ({
 }) => {
   const visitUrl = url ? url : githubUrl;
 
-  if (i % 2 !== 0) {
+  if (i % 2 === 0) {
     return (
       <div className="m-6 mb-10 flex">
         <div className="flex flex-col">
