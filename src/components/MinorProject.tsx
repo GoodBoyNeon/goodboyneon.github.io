@@ -22,13 +22,15 @@ const MinorProject: FC<ProjectProps> = ({
   project: { name, url, githubUrl, tags, description },
 }) => {
   const project = useRef<HTMLDivElement>(null);
-  project.current?.addEventListener('mousemove', e => {
-    const rect = project.current?.getBoundingClientRect();
-    const x = e.clientX - (rect?.left ?? 0);
-    const y = e.clientY - (rect?.top ?? 0);
-    project.current?.style.setProperty('--mouse-x', `${x}px`);
-    project.current?.style.setProperty('--mouse-y', `${y}px`);
-  });
+  useEffect(() => {
+    project.current?.addEventListener('mousemove', e => {
+      const rect = project.current?.getBoundingClientRect();
+      const x = e.clientX - (rect?.left ?? 0);
+      const y = e.clientY - (rect?.top ?? 0);
+      project.current?.style.setProperty('--mouse-x', `${x}px`);
+      project.current?.style.setProperty('--mouse-y', `${y}px`);
+    });
+  }, []);
   return (
     <>
       <div
