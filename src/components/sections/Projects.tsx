@@ -1,6 +1,6 @@
 import { FadeUpAnimation, MinorProject, Section, SectionHeader } from '..';
 import { majorProjects, minorProjects } from '../../lib/projectList';
-import { Rubik } from '../../utils';
+import { rubik } from '../../app/fonts';
 import MajorProject from '../MajorProject';
 
 const Projects = () => {
@@ -9,18 +9,20 @@ const Projects = () => {
       <FadeUpAnimation>
         <div className="list-none [counter-reset:css-counter_0]">
           <SectionHeader>My Projects</SectionHeader>
-          {majorProjects &&
-            majorProjects.map((project, i) => {
-              return (
-                <MajorProject key={i} project={{ i, ...project }}></MajorProject>
-              );
-            })}
+          <div className="flex flex-col items-center justify-center">
+            {majorProjects &&
+              majorProjects.map((project, i) => {
+                return (
+                  <MajorProject key={i} project={{ i, ...project }}></MajorProject>
+                );
+              })}
+          </div>
         </div>
       </FadeUpAnimation>
 
       <div className="flex flex-col items-center justify-center">
         <hr className="h-[1px] w-full border-0 bg-bg-light text-bg-light" />
-        <h3 className={`mt-6 text-white ${Rubik.className} text-2xl font-bold`}>
+        <h3 className={`mt-6 text-white ${rubik.className} text-2xl font-bold`}>
           <span className="text-primary">~</span> <span>Minor Projects</span>{' '}
           <span className="text-primary">~</span>
         </h3>

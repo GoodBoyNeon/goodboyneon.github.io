@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Dispatch, SetStateAction } from 'react';
 import { PiGithubLogoFill } from 'react-icons/pi';
 import { Toggle } from '.';
-import { Rubik } from '../utils';
+import { rubik } from '../app/fonts';
 
 const Overlays = ({
   setRenderStars,
@@ -15,7 +15,7 @@ const Overlays = ({
     <>
       <div className="fixed left-0 right-0 top-0 z-10 flex items-start justify-between">
         <Link
-          className={`${Rubik.className} absolute left-0 top-0 m-std text-[34px] font-black tracking-widest text-white`}
+          className={`${rubik.className} absolute left-0 top-0 m-std text-[34px] font-black tracking-widest text-white`}
           href="/"
         >
           NEON

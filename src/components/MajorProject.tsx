@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import { Highlight } from '.';
 import { ProjectProps } from '../lib/types/projectTypes';
-import { JetBrainsMono } from '../utils';
+import { jetBrainsMono } from '../app/fonts';
 
 type TagProps = {
   tag: string;
@@ -13,7 +13,7 @@ type TagProps = {
 const Tag: FC<TagProps> = ({ tag }) => {
   return (
     <div
-      className={`${JetBrainsMono.className} rounded border border-subtext px-2 py-2 text-center text-sm text-subtext text-opacity-100`}
+      className={`${jetBrainsMono.className} rounded border border-subtext px-2 py-2 text-center text-sm text-subtext text-opacity-100`}
     >
       {tag}
     </div>
@@ -50,7 +50,7 @@ const MajorProject: FC<ProjectProps> = ({
             {githubUrl && (
               <Link href={githubUrl} className="px-3">
                 <span
-                  className={`flex space-x-1 text-text transition duration-300 hover:text-white ${JetBrainsMono.className}`}
+                  className={`flex space-x-1 text-text transition duration-300 hover:text-white ${jetBrainsMono.className}`}
                 >
                   <FiGithub size={22} />
                 </span>
@@ -62,7 +62,7 @@ const MajorProject: FC<ProjectProps> = ({
                 <Highlight primaryColor={true}>
                   <Link href={url} className="m-0">
                     <span
-                      className={`ml-3 flex space-x-1 text-sm text-primary ${JetBrainsMono.className}`}
+                      className={`ml-3 flex space-x-1 text-sm text-primary ${jetBrainsMono.className}`}
                     >
                       <FiExternalLink size={20} /> <span>Visit Me!</span>
                     </span>
@@ -110,7 +110,7 @@ const MajorProject: FC<ProjectProps> = ({
               {githubUrl && (
                 <Link href={githubUrl} className="mr-8 px-3">
                   <span
-                    className={`flex space-x-1 text-text transition duration-300 hover:text-white ${JetBrainsMono.className}`}
+                    className={`flex space-x-1 text-text transition duration-300 hover:text-white ${jetBrainsMono.className}`}
                   >
                     <FiGithub size={22} />
                   </span>
@@ -122,7 +122,7 @@ const MajorProject: FC<ProjectProps> = ({
                   <Highlight primaryColor={true}>
                     <Link href={url} className="m-0">
                       <span
-                        className={`mr-3 flex space-x-1 text-sm text-primary ${JetBrainsMono.className}`}
+                        className={`mr-3 flex space-x-1 text-sm text-primary ${jetBrainsMono.className}`}
                       >
                         <FiExternalLink size={20} /> <span>Visit Me!</span>
                       </span>

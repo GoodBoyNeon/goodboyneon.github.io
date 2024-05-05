@@ -1,21 +1,11 @@
-'use client';
 import Image from 'next/image';
 import vector from '../../../public/vector.webp';
-import Tooltip from '../Tooltip';
 import Highlight from '../Highlight';
 import { RevealAnimation } from '..';
-// import dots from "../../public/dots.png";
 
 const Hero = () => {
   return (
     <>
-      {/*
-      <Image
-        src={dots}
-        className="absolute top-0 bottom-0 m-auto left-[49%]"
-        alt="dots"
-      ></Image>
-         */}
       <main className={`flex h-screen w-screen flex-col justify-center`}>
         <RevealAnimation>
           <h1 className={`px-6 text-5xl font-extrabold text-white`}>

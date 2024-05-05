@@ -5,7 +5,7 @@ import { Octokit } from 'octokit';
 import { useEffect, useState } from 'react';
 import { AiFillGithub, AiFillHeart } from 'react-icons/ai';
 import { BiGitRepoForked, BiStar } from 'react-icons/bi';
-import { JetBrainsMono } from '../utils';
+import { jetBrainsMono } from '../app/fonts';
 
 type GitStats = {
   stars?: number;
@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center bg-background">
         <hr className=" h-[1px] w-screen border-0 bg-bg-light text-bg-light" />
         <Link
-          className={`${JetBrainsMono.className} mt-4 flex flex-col items-center justify-center text-subtext transition-all duration-300 hover:text-primary`}
+          className={`${jetBrainsMono.className} mt-4 flex flex-col items-center justify-center text-subtext transition-all duration-300 hover:text-primary`}
           href={'https://github.com/goodboyneon/goodboyneon.github.io'}
         >
           <div className="flex flex-row space-x-1 align-middle">
