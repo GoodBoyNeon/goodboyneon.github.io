@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Icon from '../../../public/about-logo.png';
 import React from 'react';
 import { FadeUpAnimation, Highlight, Section, SectionHeader } from '..';
 
@@ -9,7 +10,7 @@ const About = () => {
     <Section name="about">
       <FadeUpAnimation>
         <SectionHeader>Heya, I am Neon!</SectionHeader>
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col-reverse items-center justify-center md:flex-row">
           <div className="flex flex-col">
             <p className="text-lg font-normal text-text">
               A passionate software developer (you&apos;ve heard that a million
@@ -32,9 +33,10 @@ const About = () => {
             </p>
           </div>
           <Image
-            src={'/about-logo.png'}
-            width={800}
-            height={800}
+            // src={'/about-logo.png'}
+            // width={800}
+            // height={800}
+            src={Icon}
             alt="neon's icon"
             className="ml-4 rounded-lg grayscale transition duration-300 hover:grayscale-0"
           />
