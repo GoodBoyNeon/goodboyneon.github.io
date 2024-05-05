@@ -26,7 +26,7 @@ const About = () => {
               <br />I later went on to learn <Highlight>APIs</Highlight>, a fair bit
               of <Highlight>Networking</Highlight>, and most importantly,{' '}
               <Highlight>Linux</Highlight>{' '}
-              <span className="text-subtext text-xs font-extralight">
+              <span className="text-xs font-extralight text-subtext">
                 I use Arch, btw
               </span>
             </p>
@@ -36,7 +36,7 @@ const About = () => {
             width={800}
             height={800}
             alt="neon's icon"
-            className="ml-4 rounded-lg grayscale-[100%] transition duration-300 hover:grayscale-0"
+            className="ml-4 rounded-lg grayscale transition duration-300 hover:grayscale-0"
           />
         </div>
       </FadeUpAnimation>

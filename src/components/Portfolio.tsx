@@ -1,21 +1,22 @@
 'use client';
 
 import {
-  Hero,
   About,
-  Stars,
   Contact,
   Footer,
-  Skills,
-  Projects,
+  Hero,
   Overlays,
+  Projects,
+  Skills,
+  Stars,
 } from '@components';
 import { useState } from 'react';
-import { useReducedMotion } from '../hooks';
 
 export default function Portfolio() {
-  const prefersReducedMotion = useReducedMotion()
-  const [renderStars, setRenderStars] = useState(!prefersReducedMotion);
+  const [renderStars, setRenderStars] = useState(false);
+
+  // setRenderStars(false); // DELETE LINE IN PRODUCTION
+
   return (
     <div>
       <Overlays setRenderStars={setRenderStars} renderStars={renderStars} />

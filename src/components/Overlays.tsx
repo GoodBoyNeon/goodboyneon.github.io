@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Dispatch, SetStateAction, useEffect } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { PiGithubLogoFill } from 'react-icons/pi';
 import { Toggle } from '.';
 import { Rubik } from '../utils';
@@ -38,9 +38,7 @@ const Overlays = ({
         <div className="fixed bottom-0 right-0 m-std flex flex-col items-center justify-center">
           <Toggle
             defaultState={renderStars}
-            onClick={() => {
-              setRenderStars(!renderStars);
-            }}
+            onClick={() => setRenderStars(!renderStars)}
           />
           <p className="mt-1 text-sm text-subtext">Toggle Stars</p>
         </div>
