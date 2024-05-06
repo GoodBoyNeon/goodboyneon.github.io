@@ -1,5 +1,6 @@
 'use client';
 
+import { useReducedMotion } from '@/hooks';
 import {
   About,
   Contact,
@@ -13,9 +14,8 @@ import {
 import { useState } from 'react';
 
 export default function Portfolio() {
-  const [renderStars, setRenderStars] = useState(false);
-
-  // setRenderStars(false); // DELETE LINE IN PRODUCTION
+  const reducedMotion = useReducedMotion();
+  const [renderStars, setRenderStars] = useState(!reducedMotion);
 
   return (
     <div>

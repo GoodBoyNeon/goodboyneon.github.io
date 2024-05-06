@@ -7,7 +7,7 @@ type SectionProps = {
 
 const Section: FC<SectionProps> = ({ name, children }) => {
   return (
-    <section id={name} className="m-4 my-24 md:m-36 2xl:m-48">
+    <section id={name} className="p-4 py-24 md:p-36 2xl:p-48">
       {children}
     </section>
   );
