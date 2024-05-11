@@ -30,6 +30,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--primary-darker);
+  overflow-x: hidden;
 }
 
 ::selection {
