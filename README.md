@@ -15,7 +15,7 @@ Welcome to my Portfolio! Visit it over here: [Click here](https://neon.is-a.dev)
 - This portfolio's design & layout was inspired by [Todor's Website](https://dvlpr.pro/) and [Brittany's Website (4th iteration)](https://v4.brittanychiang.com/). 
 
 > [!Note]
-> "Inspired" does NOT mean equal "copied", thus, no code was copied line-to-line from either of the websites. The credited parts are the layouts of various sections, and just the overall design.
+> "Inspired" does not equal "copied", thus, no code was copied line-to-line from either of the websites. The credited parts are the layouts of various sections and the overall design.
 
 
 ### Made with ❤️ by Neon!
