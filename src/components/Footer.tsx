@@ -45,12 +45,12 @@ const Footer = () => {
             <span className="align-bottom">Made with</span>
             <AiFillHeart size={20} /> <span className="align-bottom">by Neon!</span>
           </div>
-          <div className="flex w-20 justify-between space-x-1 font-normal">
-            <span className="flex flex-row">
+          <div className="flex w-20 justify-between gap-4 font-normal">
+            <span className="flex flex-row gap-1">
               <BiStar size={20} />
               <span>{stars && stars}</span>
             </span>
-            <span className="flex flex-row">
+            <span className="flex flex-row gap-1">
               <BiGitRepoForked size={20} />
               <span>{forks && forks}</span>
             </span>
