@@ -1,13 +1,15 @@
 {
-  "name": "my-portfolio",
-  "version": "0.1.0",
+  "name": "neon-portfolio",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier -write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@react-three/drei": "^9.83.8",

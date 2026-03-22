@@ -1,19 +1,50 @@
-import { Fira_Sans, Dela_Gothic_One, JetBrains_Mono, Rubik } from 'next/font/google';
+import {
+  Fira_Sans,
+  Dela_Gothic_One,
+  JetBrains_Mono,
+  Rubik,
+  Pacifico,
+  Comic_Neue,
+  Titan_One,
+  Climate_Crisis,
+  Coiny,
+  Lobster,
+  Abel,
+} from "next/font/google";
 
 export const firaSans = Fira_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const delaGothicOne = Dela_Gothic_One({
-  subsets: ['latin'],
-  weight: ['400'],
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const jetBrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
+  subsets: ["latin"],
 });
 
 export const rubik = Rubik({
-  subsets: ['latin'],
+  subsets: ["latin"],
+});
+
+export const pacifico = Pacifico({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+export const comic = Comic_Neue({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+export const titanOne = Titan_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+export const lobster = Lobster({
+  subsets: ["latin"],
+  weight: ["400"],
 });
