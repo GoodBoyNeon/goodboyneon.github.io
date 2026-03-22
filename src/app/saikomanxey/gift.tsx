@@ -13,7 +13,7 @@ const C = {
   border: "#EAD9C0",
 };
 
-const THRESHOLD = 85;
+const THRESHOLD = 136;
 
 // ─── Bow (SVG) ──────────────────────────────────────────────────────────────
 function Bow({ size = 72 }) {
@@ -137,6 +137,7 @@ export default function GiftBox({
         dragging.current = false;
         setPhase("flinging");
         setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
           setPhase("open");
           setIsGiftOpen(true);
         }, 520);

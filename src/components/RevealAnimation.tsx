@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion, useAnimation, useInView } from 'framer-motion';
-import React, { FC, ReactElement, useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView } from "motion/react";
+import React, { FC, ReactElement, useEffect, useRef } from "react";
 
 type RevealAnimationProps = {
   delay?: number;
@@ -10,7 +10,7 @@ type RevealAnimationProps = {
 };
 
 const RevealAnimation: FC<RevealAnimationProps> = ({
-  width = 'fit-content',
+  width = "fit-content",
   children,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,8 +21,8 @@ const RevealAnimation: FC<RevealAnimationProps> = ({
 
   useEffect(() => {
     if (isInView) {
-      animationControls.start('after');
-      coverControls.start('after');
+      animationControls.start("after");
+      coverControls.start("after");
     }
   }, [isInView, animationControls, coverControls]);
   return (
@@ -46,22 +46,22 @@ const RevealAnimation: FC<RevealAnimationProps> = ({
       </motion.div>
       <motion.div
         variants={{
-          before: { left: '0' },
-          after: { left: '100%' },
+          before: { left: "0" },
+          after: { left: "100%" },
         }}
         initial="before"
         animate={coverControls}
         transition={{
           duration: 0.5,
-          ease: 'easeIn',
+          ease: "easeIn",
         }}
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 4,
           bottom: 4,
           left: 0,
           right: 0,
-          background: 'var(--color-primary)',
+          background: "var(--color-primary)",
         }}
       ></motion.div>
     </div>

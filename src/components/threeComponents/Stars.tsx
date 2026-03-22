@@ -1,9 +1,8 @@
-'use client';
-import { Canvas } from '@react-three/fiber';
-import React, { Suspense, useMemo, useRef } from 'react';
-import { useTexture } from '@react-three/drei';
-import { MathUtils, BufferAttribute, Points } from 'three';
-import { useFrame } from '@react-three/fiber';
+"use client";
+import { useTexture } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense, useMemo, useRef } from "react";
+import { BufferAttribute, MathUtils, Points, TypedArray } from "three";
 
 const Scene = () => {
   const mesh = useRef<Points>(null);
@@ -18,7 +17,7 @@ const Scene = () => {
     return new BufferAttribute(new Float32Array(v), 3);
   }, [starsCount]);
 
-  const starMap = useTexture('star.png');
+  const starMap = useTexture("star.png");
 
   useFrame(state => {
     const top = document.body.getBoundingClientRect().top;
@@ -30,9 +29,12 @@ const Scene = () => {
       {/* Mesh */}
       <points ref={mesh}>
         <bufferGeometry>
-          <bufferAttribute attach={'attributes-position'} {...vertices} />
+          <bufferAttribute
+            args={[vertices as unknown as TypedArray, 3]}
+            attach={"attributes-position"}
+          />
         </bufferGeometry>
-        <pointsMaterial color={'#fff'} size={0.25} map={starMap} />
+        <pointsMaterial color={"#fff"} size={0.25} map={starMap} />
       </points>
     </>
   );
@@ -40,7 +42,7 @@ const Scene = () => {
 
 const Stars = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 top-0 -z-10 opacity-[0.45]">
+    <div className="fixed top-0 right-0 bottom-0 left-0 -z-10 opacity-[0.45]">
       <Canvas id="three-canvas-container">
         <Suspense fallback={null}>
           <Scene />

@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { useRef, useState } from "react";
 import { comic, pacifico, rubik, titanOne } from "../fonts";
 import CornerBanner from "./flag";
@@ -11,8 +11,8 @@ import FSMPopUp from "./popup";
 export default function ForMiss() {
   const [isGiftOpen, setIsGiftOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const [slide, setSlide] = useState<0 | 1 | 2 | 3>(0);
-  const [showMain, setShowMain] = useState(true);
+  const [slide, setSlide] = useState<0 | 1 | 2 | 3>(1);
+  const [showMain, setShowMain] = useState(false);
 
   const triggerConfetti = async () => {
     if (!buttonRef.current) return;
@@ -155,12 +155,12 @@ export default function ForMiss() {
   };
 
   return (
-    <main className="min-h-screen bg-linear-to-bl from-rose-200 via-purple-200 to-pink-100">
+    <main className="min-h-screen overflow-x-hidden bg-linear-to-bl from-rose-200 via-purple-200 to-pink-100">
       {!isGiftOpen ? (
         <div className="">
           {slide === 1 && (
             <FSMPopUp>
-              <div className="space-y-6">
+              <div className="flex flex-col gap-6">
                 <h2
                   className={`text-center text-pink-950 ${pacifico.className} text-3xl`}
                 >
@@ -170,7 +170,7 @@ export default function ForMiss() {
                   onClick={() => {
                     setSlide(2);
                   }}
-                  className={`relative rounded-full border-2 border-purple-400 bg-linear-to-br from-purple-500 via-purple-400 to-indigo-500 px-8 py-3 text-lg font-bold text-white backdrop-blur-xs transition-all duration-200 ease-out before:absolute before:inset-0 before:rounded-full before:bg-linear-to-r before:from-purple-300 before:to-blue-300 before:opacity-0 before:transition-opacity before:duration-300 hover:border-violet-300 hover:text-white hover:before:opacity-20 active:before:opacity-40 ${comic.className}`}
+                  className={`relative cursor-pointer rounded-full border-2 border-purple-400 bg-linear-to-br from-purple-500 via-purple-400 to-indigo-500 px-8 py-3 text-lg font-bold text-white backdrop-blur-xs transition transition-all duration-200 ease-out before:absolute before:inset-0 before:rounded-full before:bg-linear-to-r before:from-purple-300 before:to-blue-300 before:opacity-0 before:transition-opacity before:duration-300 hover:border-violet-300 hover:text-white hover:before:opacity-20 active:before:opacity-40 ${comic.className}`}
                 >
                   <span
                     className={`absolute inset-0 rounded-full bg-linear-to-r from-pink-400 to-rose-400 opacity-0 blur-xl transition-opacity duration-300`}
@@ -184,7 +184,7 @@ export default function ForMiss() {
 
           {slide === 2 && (
             <FSMPopUp>
-              <div className="space-y-6">
+              <div className="flex flex-col gap-6">
                 <h2
                   className={`text-center text-indigo-900 ${pacifico.className} text-3xl`}
                 >
@@ -194,7 +194,7 @@ export default function ForMiss() {
                   onClick={() => {
                     setSlide(3);
                   }}
-                  className={`relative rounded-full border-2 border-blue-400 bg-linear-to-br from-blue-500 via-blue-400 to-violet-500 px-8 py-3 text-lg font-bold text-white backdrop-blur-xs transition-all duration-200 ease-out before:absolute before:inset-0 before:rounded-full before:bg-linear-to-r before:from-indigo-300 before:to-cyan-300 before:opacity-0 before:transition-opacity before:duration-300 hover:border-cyan-300 hover:text-white hover:before:opacity-20 active:before:opacity-40 ${comic.className}`}
+                  className={`relative cursor-pointer rounded-full border-2 border-blue-400 bg-linear-to-br from-blue-500 via-blue-400 to-violet-500 px-8 py-3 text-lg font-bold text-white backdrop-blur-xs transition-all duration-200 ease-out before:absolute before:inset-0 before:rounded-full before:bg-linear-to-r before:from-indigo-300 before:to-cyan-300 before:opacity-0 before:transition-opacity before:duration-300 hover:border-cyan-300 hover:text-white hover:before:opacity-20 active:before:opacity-40 ${comic.className}`}
                 >
                   <span
                     className={`absolute inset-0 rounded-full bg-linear-to-r from-pink-400 to-rose-400 opacity-0 blur-xl transition-opacity duration-300`}
@@ -214,7 +214,7 @@ export default function ForMiss() {
                 exit={{ opacity: 0, scale: 0 }}
               >
                 <FSMPopUp>
-                  <div className="space-y-6">
+                  <div className="flex flex-col gap-6">
                     <h2
                       className={`text-center ${titanOne.className} bg-linear-to-bl from-violet-500 via-pink-500 to-violet-500 bg-clip-text text-4xl text-transparent drop-shadow-xs`}
                     >
@@ -228,7 +228,7 @@ export default function ForMiss() {
                         await triggerBalloons();
                         setShowMain(true);
                       }}
-                      className={`relative rounded-full border-2 border-pink-400 bg-linear-to-br from-pink-500 via-pink-400 to-rose-500 px-8 py-3 text-lg font-bold text-white backdrop-blur-xs transition-all duration-200 ease-out before:absolute before:inset-0 before:rounded-full before:bg-linear-to-r before:from-purple-300 before:to-pink-300 before:opacity-0 before:transition-opacity before:duration-300 hover:border-pink-300 hover:text-white hover:before:opacity-20 active:before:opacity-40 ${comic.className}`}
+                      className={`relative cursor-pointer rounded-full border-2 border-pink-400 bg-linear-to-br from-pink-500 via-pink-400 to-rose-500 px-8 py-3 text-lg font-bold text-white backdrop-blur-xs transition-all duration-200 ease-out before:absolute before:inset-0 before:rounded-full before:bg-linear-to-r before:from-purple-300 before:to-pink-300 before:opacity-0 before:transition-opacity before:duration-300 hover:border-pink-300 hover:text-white hover:before:opacity-20 active:before:opacity-40 ${comic.className}`}
                     >
                       <span
                         className={`absolute inset-0 rounded-full bg-linear-to-r from-pink-400 to-rose-400 opacity-0 blur-xl transition-opacity duration-300`}
@@ -255,26 +255,25 @@ export default function ForMiss() {
                 <CornerBanner side="right" width={160} height={160} flagCount={6} />
               </motion.div>
 
-              <div className="pt-36">
+              <div className="flex items-center justify-center px-12 pt-36 text-center">
                 <motion.div
                   initial={{ y: -200, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{
+                    type: "spring",
                     duration: 0.8,
                     delay: 0.6,
-                    type: "spring",
                     stiffness: 120,
                     damping: 10,
                     mass: 0.8,
                   }}
                 >
-                  <div className="flex items-center space-x-3 px-3 py-2 text-5xl">
+                  <div className="flex items-center gap-3 px-3 py-2 text-5xl">
                     <motion.div
                       animate={{
                         rotate: [-18, 18, -18],
                       }}
                       transition={{
-                        type: "just",
                         repeat: Infinity,
                         repeatType: "loop",
                         duration: 1.2,
@@ -332,7 +331,6 @@ export default function ForMiss() {
                         rotate: [-18, 18, -18],
                       }}
                       transition={{
-                        type: "just",
                         repeat: Infinity,
                         repeatType: "loop",
                         duration: 1.2,
@@ -346,6 +344,7 @@ export default function ForMiss() {
               </div>
               <div className="px-3 py-12">
                 <motion.div
+                  className={`font rounded-lg border-2 border-violet-300 bg-pink-50 px-2 py-3 text-center text-xl text-violet-950 drop-shadow-lg ${pacifico.className} mx-6 flex items-center justify-center text-center`}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{
@@ -355,20 +354,24 @@ export default function ForMiss() {
                     stiffness: 500,
                     damping: 20,
                   }}
-                  className={`font rounded-lg border-2 border-violet-300 bg-pink-50 px-2 py-3 text-center text-xl text-black drop-shadow-lg ${pacifico.className} mx-6`}
                 >
-                  💫 Wishing you a really joyful birthday! It&apos;s the day to
-                  celebrate you and everything you are... So enjoy it to the
-                  fullest~! 🧿
+                  <p>
+                    💫 Wishing you a really joyful birthday! It&apos;s the day to
+                    celebrate you and everything you are... So enjoy it to the
+                    fullest~! 🧿
+                  </p>
                 </motion.div>
               </div>
-              <div className="relative flex items-center justify-center pt-28">
+              <div className="relative flex items-center justify-center pt-28 pb-12">
                 <motion.div
-                  initial={{ y: 2000, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                  initial={{ y: "100vh" }}
+                  animate={{ y: 0 }}
                   transition={{
-                    duration: 1,
-                    delay: 2.2,
+                    type: "spring",
+                    stiffness: 80,
+                    damping: 15,
+                    duration: 1.2,
+                    delay: 2,
                   }}
                 >
                   <GiftBox isGiftOpen={isGiftOpen} setIsGiftOpen={setIsGiftOpen} />
@@ -379,10 +382,12 @@ export default function ForMiss() {
         </div>
       ) : (
         <motion.div
-          initial={{ scale: 0, y: 1000 }}
+          initial={{ scale: 0.5, y: "100vh" }}
           animate={{ scale: 1, y: 0 }}
           transition={{
             type: "spring",
+            stiffness: 80,
+            damping: 15,
             duration: 1.5,
           }}
           className="mx-6 flex items-center justify-center py-18"

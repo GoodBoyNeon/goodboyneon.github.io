@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion, useAnimation, useInView } from 'framer-motion';
-import { FC, ReactNode, useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView } from "motion/react";
+import { FC, ReactNode, useEffect, useRef } from "react";
 
 type FadeUpAnimationProps = {
   children: ReactNode;
@@ -14,7 +14,7 @@ const FadeUpAnimation: FC<FadeUpAnimationProps> = ({ children }) => {
 
   useEffect(() => {
     if (isInView) {
-      animationControls.start('after');
+      animationControls.start("after");
     }
   }, [animationControls, isInView]);
 
