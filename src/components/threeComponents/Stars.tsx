@@ -2,7 +2,7 @@
 import { useTexture } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense, useMemo, useRef } from "react";
-import { BufferAttribute, MathUtils, Points, TypedArray } from "three";
+import { MathUtils, Points } from "three";
 
 const Scene = () => {
   const mesh = useRef<Points>(null);
@@ -10,11 +10,11 @@ const Scene = () => {
   const starsCount = 1000;
 
   const vertices = useMemo(() => {
-    // const v = new Array(starsCount).fill(0).map(() => Math.random() * 600 - 300);
-    const v = new Array(starsCount)
-      .fill(0)
-      .map(() => MathUtils.randFloatSpread(100));
-    return new BufferAttribute(new Float32Array(v), 3);
+    const v = new Float32Array(starsCount * 3);
+    for (let i = 0; i < starsCount * 3; i++) {
+      v[i] = MathUtils.randFloatSpread(100);
+    }
+    return v;
   }, [starsCount]);
 
   const starMap = useTexture("star.png");
@@ -29,10 +29,7 @@ const Scene = () => {
       {/* Mesh */}
       <points ref={mesh}>
         <bufferGeometry>
-          <bufferAttribute
-            args={[vertices as unknown as TypedArray, 3]}
-            attach={"attributes-position"}
-          />
+          <bufferAttribute args={[vertices, 3]} attach={"attributes-position"} />
         </bufferGeometry>
         <pointsMaterial color={"#fff"} size={0.25} map={starMap} />
       </points>
