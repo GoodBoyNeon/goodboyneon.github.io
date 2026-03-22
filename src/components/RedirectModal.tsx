@@ -17,14 +17,14 @@ const RedirectModal = () => {
         </p>
         <div className="flex items-center justify-between">
           <button
-            className="rounded border border-white p-4 text-white hover:bg-white hover:bg-opacity-75 hover:text-black"
+            className="rounded-sm border border-white p-4 text-white hover:bg-white hover:bg-opacity-75 hover:text-black"
             onClick={() => setShowModal(false)}
           >
             No, Stay here
           </button>
           <Link
             href="https://v1.neon.is-a.dev"
-            className="m-4 cursor-pointer rounded border border-white bg-white p-4 hover:bg-opacity-75"
+            className="m-4 cursor-pointer rounded-sm border border-white bg-white p-4 hover:bg-opacity-75"
           >
             Yes, Take me to the old one
           </Link>

@@ -13,7 +13,7 @@ type TagProps = {
 const Tag: FC<TagProps> = ({ tag }) => {
   return (
     <div
-      className={`${jetBrainsMono.className} rounded border border-subtext px-2 py-2 text-center text-sm text-subtext text-opacity-100`}
+      className={`${jetBrainsMono.className} rounded-sm border border-subtext px-2 py-2 text-center text-sm text-subtext text-opacity-100`}
     >
       {tag}
     </div>
@@ -32,12 +32,12 @@ const MajorProject: FC<ProjectProps> = ({
           <Link
             href={visitUrl}
             target="_blank"
-            className={`z-[1] ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
+            className={`z-1 ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
           >
             <Highlight>{name}</Highlight>
           </Link>
           <div className="relative bottom-4 m-0">
-            <p className="h-min max-w-[40vw] rounded bg-bg-light p-5 pt-7 text-text drop-shadow-bl">
+            <p className="h-min max-w-[40vw] rounded-sm bg-bg-light p-5 pt-7 text-text drop-shadow-bl">
               {description}
             </p>
           </div>
@@ -91,12 +91,12 @@ const MajorProject: FC<ProjectProps> = ({
             <Link
               href={visitUrl}
               target="_blank"
-              className={`relative right-12 z-[1] ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
+              className={`relative right-12 z-1 ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
             >
               <Highlight>{name}</Highlight>
             </Link>
             <div className="relative bottom-4 right-10 m-0">
-              <p className="h-min max-w-[40vw] rounded bg-bg-light p-5 pt-7 text-right text-text drop-shadow-bl">
+              <p className="h-min max-w-[40vw] rounded-sm bg-bg-light p-5 pt-7 text-right text-text drop-shadow-bl">
                 {description}
               </p>
             </div>

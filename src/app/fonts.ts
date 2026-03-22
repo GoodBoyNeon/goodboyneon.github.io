@@ -1,15 +1,14 @@
 import {
-  Fira_Sans,
-  Dela_Gothic_One,
-  JetBrains_Mono,
-  Rubik,
-  Pacifico,
   Comic_Neue,
-  Titan_One,
-  Climate_Crisis,
-  Coiny,
+  Dela_Gothic_One,
+  Fira_Sans,
+  Great_Vibes,
+  IBM_Plex_Serif,
+  JetBrains_Mono,
   Lobster,
-  Abel,
+  Pacifico,
+  Rubik,
+  Titan_One,
 } from "next/font/google";
 
 export const firaSans = Fira_Sans({
@@ -47,4 +46,9 @@ export const titanOne = Titan_One({
 export const lobster = Lobster({
   subsets: ["latin"],
   weight: ["400"],
+});
+
+export const serif = IBM_Plex_Serif({
+  weight: ["400", "500"],
+  subsets: ["latin"],
 });

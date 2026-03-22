@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="flex flex-col items-center justify-center bg-background">
-        <hr className=" h-[1px] w-screen border-0 bg-bg-light text-bg-light" />
+        <hr className=" h-px w-screen border-0 bg-bg-light text-bg-light" />
         <Link
           className={`${jetBrainsMono.className} mt-4 flex flex-col items-center justify-center text-subtext transition-all duration-300 hover:text-primary`}
           href={'https://github.com/goodboyneon/goodboyneon.github.io'}

@@ -12,7 +12,7 @@ type TagProps = {
 const Tag: FC<TagProps> = ({ tag }) => {
   return (
     <div
-      className={`${jetBrainsMono.className} rounded border border-subtext px-2 py-2 text-center text-sm text-subtext text-opacity-100`}
+      className={`${jetBrainsMono.className} rounded-sm border border-subtext px-2 py-2 text-center text-sm text-subtext text-opacity-100`}
     >
       {tag}
     </div>
@@ -35,7 +35,7 @@ const MinorProject: FC<ProjectProps> = ({
     <>
       <div
         ref={project}
-        className="relative flex flex-col rounded border border-solid border-[rgba(255,_255,_255,_0.18)] bg-glass-effect-gradient p-6 backdrop-blur-md transition-opacity duration-150 [box-shadow:0_8px_32px_0_rgba(0,_0,_0,_0.2)] before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-20 before:h-full before:w-full before:rounded-[inherit] before:bg-gradient-glow before:opacity-0 before:transition-opacity before:duration-500 before:content-[''] before:[background:radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),rgba(255,255,255,0.06),transparent_40%)] before:hover:opacity-100"
+        className="relative flex flex-col rounded-sm border border-solid border-[rgba(255,255,255,0.18)] bg-glass-effect-gradient p-6 backdrop-blur-md transition-opacity duration-150 [box-shadow:0_8px_32px_0_rgba(0,0,0,0.2)] before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-20 before:h-full before:w-full before:rounded-[inherit] before:bg-gradient-glow before:opacity-0 before:transition-opacity before:duration-500 before:content-[''] before:[background:radial-gradient(800px_circle_at_var(--mouse-x)_var(--mouse-y),rgba(255,255,255,0.06),transparent_40%)] hover:before:opacity-100"
       >
         <div>
           <p className={`text-sm text-special-text ${jetBrainsMono.className}`}>

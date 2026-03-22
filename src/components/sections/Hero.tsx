@@ -12,7 +12,7 @@ const Hero = () => {
         <RevealAnimation>
           <h1 className={`text-5xl font-extrabold text-white`}>
             Neon The{' '}
-            <span className="bg-gradient-to-r from-primary to-special-text bg-[size:0%_8px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 ease-in hover:bg-[size:100%_8px]">
+            <span className="bg-linear-to-r from-primary to-special-text bg-size-[0%_8px] bg-bottom-left bg-no-repeat transition-[background-size] duration-300 ease-in hover:bg-size-[100%_8px]">
               Developer
             </span>
           </h1>

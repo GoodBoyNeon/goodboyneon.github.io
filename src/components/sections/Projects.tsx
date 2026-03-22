@@ -21,7 +21,7 @@ const Projects = () => {
       </FadeUpAnimation>
 
       <div className="flex flex-col items-center justify-center">
-        <hr className="h-[1px] w-full border-0 bg-bg-light text-bg-light" />
+        <hr className="h-px w-full border-0 bg-bg-light text-bg-light" />
         <h3 className={`mt-6 text-white ${rubik.className} text-2xl font-bold`}>
           <span className="text-primary">~</span> <span>Minor Projects</span>{' '}
           <span className="text-primary">~</span>

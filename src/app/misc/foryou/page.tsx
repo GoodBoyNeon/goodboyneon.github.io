@@ -24,7 +24,7 @@ export default function DashainPage() {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100">
+    <main className="relative min-h-screen overflow-hidden bg-linear-to-br from-pink-100 via-purple-50 to-blue-100">
       {/* Confetti */}
       {confetti.map(piece => (
         <div
@@ -137,10 +137,10 @@ export default function DashainPage() {
         {/* Main Message */}
         {showMessage && (
           <div className="animate-pop-in text-center">
-            <h1 className="text-balance animate-wiggle mb-6 bg-gradient-to-r from-pink-600 via-purple-600 to-red-600 bg-clip-text text-6xl font-black leading-tight text-transparent sm:text-7xl md:text-8xl lg:text-9xl">
+            <h1 className="text-balance animate-wiggle mb-6 bg-linear-to-r from-pink-600 via-purple-600 to-red-600 bg-clip-text text-6xl font-black leading-tight text-transparent sm:text-7xl md:text-8xl lg:text-9xl">
               Happy Dashain
             </h1>
-            <h2 className="text-balance mb-8 bg-gradient-to-r from-purple-600 via-pink-600 to-red-400 bg-clip-text text-5xl font-black leading-tight text-transparent sm:text-6xl md:text-7xl lg:text-8xl">
+            <h2 className="text-balance mb-8 bg-linear-to-r from-purple-600 via-pink-600 to-red-400 bg-clip-text text-5xl font-black leading-tight text-transparent sm:text-6xl md:text-7xl lg:text-8xl">
               Akriti Didi !
             </h2>
           </div>
@@ -214,7 +214,7 @@ export default function DashainPage() {
 
         {/* Message Card */}
         <div
-          className="bg-white/80 animate-pop-in mx-auto max-w-md rounded-3xl p-8 shadow-2xl backdrop-blur-sm"
+          className="bg-white/80 animate-pop-in mx-auto max-w-md rounded-3xl p-8 shadow-2xl backdrop-blur-xs"
           style={{ animationDelay: '0.7s' }}
         >
           <p className="text-balance mb-4 text-center text-2xl font-bold text-purple-900 sm:text-3xl">

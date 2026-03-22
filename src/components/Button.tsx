@@ -22,8 +22,8 @@ interface LinkButtonProps extends BaseButtonProps {
 
 const Button: FC<NormalButtonProps | LinkButtonProps> = props => {
   const { className = '' } = props;
-  const primaryClassName = `${className} w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none`;
-  const secondaryClassName = `${className} w-fit rounded border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none`;
+  const primaryClassName = `${className} w-fit rounded-sm border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none`;
+  const secondaryClassName = `${className} w-fit rounded-sm border border-primary bg-transparent px-8 py-3 text-2xl font-medium text-primary shadow-[4px_4px] shadow-primary transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none`;
 
   const buttonClassName =
     props.style === 'Primary' ? primaryClassName : secondaryClassName;
