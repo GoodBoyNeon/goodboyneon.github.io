@@ -189,7 +189,7 @@ export default function GiftBox({
 
   return (
     <div>
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center">
         <style>{`
         @keyframes giftSpark {
           0%   { transform: scale(0) translateY(0);    opacity: 1; }

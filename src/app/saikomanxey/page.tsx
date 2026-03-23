@@ -9,10 +9,10 @@ import Msg from "./msg";
 import FSMPopUp from "./popup";
 
 export default function ForMiss() {
-  const [isGiftOpen, setIsGiftOpen] = useState(false);
-  const buttonRef = useRef<HTMLButtonElement>(null);
   const [slide, setSlide] = useState<0 | 1 | 2 | 3>(1);
   const [showMain, setShowMain] = useState(false);
+  const [isGiftOpen, setIsGiftOpen] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const triggerConfetti = async () => {
     if (!buttonRef.current) return;
@@ -285,8 +285,7 @@ export default function ForMiss() {
                     <div className={`text-center ${rubik.className}`}>
                       <span className="bg-gradient-to-r from-rose-700 via-purple-600 to-cyan-600 bg-clip-text font-extrabold text-transparent">
                         HAPPY BIRTHDAY
-                      </span>
-
+                      </span>{" "}
                       <div className="relative inline-block text-5xl leading-none font-extrabold">
                         <span className="absolute top-0 left-0 translate-y-[1px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
                           AAKRITI
@@ -301,7 +300,7 @@ export default function ForMiss() {
                           AAKRITI
                         </span>
 
-                        <span className="relative text-black">AAKRITI</span>
+                        <span className="relative text-purple-950">AAKRITI</span>
                         {[...Array(24)].map((_, i) => (
                           <motion.span
                             suppressHydrationWarning
