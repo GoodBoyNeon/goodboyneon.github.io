@@ -10,10 +10,10 @@ import {
   BiLogoReact,
   BiLogoTailwindCss,
   BiLogoTypescript,
-} from 'react-icons/bi';
-import { SiLua, SiLinux, SiNextdotjs, SiPrisma, SiSqlite } from 'react-icons/si';
-import { FadeUpAnimation, Section, SectionHeader } from '..';
-import SkillItem from '../SkillItem';
+} from "react-icons/bi";
+import { SiLua, SiLinux, SiNextdotjs, SiPrisma, SiSqlite } from "react-icons/si";
+import { FadeUpAnimation, Section, SectionHeader } from "..";
+import SkillItem from "../SkillItem";
 
 const Skills = () => {
   return (
@@ -21,7 +21,7 @@ const Skills = () => {
       <FadeUpAnimation>
         <div className="">
           <SectionHeader>What can I do for you?</SectionHeader>
-          <p className="text-lg font-normal text-text">
+          <p className="text-text text-lg font-normal">
             Over the years, I&apos;ve learnt a lot of stuff, so here&apos;s a few of
             those which I have did the best:
           </p>
@@ -34,11 +34,11 @@ const Skills = () => {
               <BiLogoJavascript />
             </SkillItem>
 
-            <SkillItem name="Next.js">
+            <SkillItem name="NextJS">
               <SiNextdotjs />
             </SkillItem>
 
-            <SkillItem name="React.js">
+            <SkillItem name="React">
               <BiLogoReact />
             </SkillItem>
 
@@ -70,7 +70,11 @@ const Skills = () => {
               <BiLogoGit />
             </SkillItem>
 
-            <SkillItem name="Mongo DB">
+            <SkillItem name="SQL Databases">
+              <SiSqlite />
+            </SkillItem>
+
+            <SkillItem name="MongoDB">
               <BiLogoMongodb />
             </SkillItem>
 
@@ -82,11 +86,7 @@ const Skills = () => {
               <SiLua />
             </SkillItem>
 
-            <SkillItem name="SQL Databases">
-              <SiSqlite />
-            </SkillItem>
-
-            <SkillItem name="GraphQl">
+            <SkillItem name="GraphQL">
               <BiLogoGraphql />
             </SkillItem>
           </div>

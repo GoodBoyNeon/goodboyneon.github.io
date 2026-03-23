@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
-import { Highlight } from '.';
-import { ProjectProps } from '../lib/types/projectTypes';
-import { jetBrainsMono } from '../app/fonts';
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { Highlight } from ".";
+import { ProjectProps } from "../lib/types/projectTypes";
+import { jetBrainsMono } from "../app/fonts";
 
 type TagProps = {
   tag: string;
@@ -13,7 +13,7 @@ type TagProps = {
 const Tag: FC<TagProps> = ({ tag }) => {
   return (
     <div
-      className={`${jetBrainsMono.className} rounded-sm border border-subtext px-2 py-2 text-center text-sm text-subtext text-opacity-100`}
+      className={`${jetBrainsMono.className} border-subtext text-subtext text-opacity-100 rounded-sm border px-2 py-2 text-center text-sm`}
     >
       {tag}
     </div>
@@ -21,7 +21,7 @@ const Tag: FC<TagProps> = ({ tag }) => {
 };
 
 const MajorProject: FC<ProjectProps> = ({
-  project: { name, description, image, tags, githubUrl = '', url, i },
+  project: { name, description, image, tags, githubUrl = "", url, i },
 }) => {
   const visitUrl = url ? url : githubUrl;
 
@@ -32,12 +32,12 @@ const MajorProject: FC<ProjectProps> = ({
           <Link
             href={visitUrl}
             target="_blank"
-            className={`z-1 ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
+            className={`before:text-subtext z-1 mt-11 ml-3 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:content-[counter(css-counter)_"._"]`}
           >
             <Highlight>{name}</Highlight>
           </Link>
           <div className="relative bottom-4 m-0">
-            <p className="h-min max-w-[40vw] rounded-sm bg-bg-light p-5 pt-7 text-text drop-shadow-bl">
+            <p className="bg-bg-light text-text drop-shadow-bl h-min max-w-[40vw] rounded-sm p-5 pt-7">
               {description}
             </p>
           </div>
@@ -50,7 +50,7 @@ const MajorProject: FC<ProjectProps> = ({
             {githubUrl && (
               <Link href={githubUrl} className="px-3">
                 <span
-                  className={`flex space-x-1 text-text transition duration-300 hover:text-white ${jetBrainsMono.className}`}
+                  className={`text-text flex space-x-1 transition duration-300 hover:text-white ${jetBrainsMono.className}`}
                 >
                   <FiGithub size={22} />
                 </span>
@@ -58,11 +58,11 @@ const MajorProject: FC<ProjectProps> = ({
             )}
             {url && (
               <>
-                <span className="border-l border-bg-light"></span>
+                <span className="border-bg-light border-l"></span>
                 <Highlight primaryColor={true}>
                   <Link href={url} className="m-0">
                     <span
-                      className={`ml-3 flex space-x-1 text-sm text-primary ${jetBrainsMono.className}`}
+                      className={`text-primary ml-3 flex space-x-1 text-sm ${jetBrainsMono.className}`}
                     >
                       <FiExternalLink size={20} /> <span>Visit Me!</span>
                     </span>
@@ -91,12 +91,12 @@ const MajorProject: FC<ProjectProps> = ({
             <Link
               href={visitUrl}
               target="_blank"
-              className={`relative right-12 z-1 ml-3 mt-11 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:text-subtext before:content-[counter(css-counter)_"._"]`}
+              className={`before:text-subtext relative right-12 z-1 mt-11 ml-3 list-none text-3xl font-extrabold text-white transition-all duration-300 [counter-increment:css-counter_1] before:content-[counter(css-counter)_"._"]`}
             >
               <Highlight>{name}</Highlight>
             </Link>
-            <div className="relative bottom-4 right-10 m-0">
-              <p className="h-min max-w-[40vw] rounded-sm bg-bg-light p-5 pt-7 text-right text-text drop-shadow-bl">
+            <div className="relative right-10 bottom-4 m-0">
+              <p className="bg-bg-light text-text drop-shadow-bl h-min max-w-[40vw] rounded-sm p-5 pt-7 text-right">
                 {description}
               </p>
             </div>
@@ -110,7 +110,7 @@ const MajorProject: FC<ProjectProps> = ({
               {githubUrl && (
                 <Link href={githubUrl} className="mr-8 px-3">
                   <span
-                    className={`flex space-x-1 text-text transition duration-300 hover:text-white ${jetBrainsMono.className}`}
+                    className={`text-text flex space-x-1 transition duration-300 hover:text-white ${jetBrainsMono.className}`}
                   >
                     <FiGithub size={22} />
                   </span>
@@ -118,11 +118,11 @@ const MajorProject: FC<ProjectProps> = ({
               )}
               {url && (
                 <>
-                  <span className="border-l border-bg-light"></span>
+                  <span className="border-bg-light border-l"></span>
                   <Highlight primaryColor={true}>
                     <Link href={url} className="m-0">
                       <span
-                        className={`mr-3 flex space-x-1 text-sm text-primary ${jetBrainsMono.className}`}
+                        className={`text-primary mr-3 flex space-x-1 text-sm ${jetBrainsMono.className}`}
                       >
                         <FiExternalLink size={20} /> <span>Visit Me!</span>
                       </span>
