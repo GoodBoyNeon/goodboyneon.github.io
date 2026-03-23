@@ -7,12 +7,12 @@ import { MathUtils, Points } from "three";
 const Scene = () => {
   const mesh = useRef<Points>(null);
 
-  const starsCount = 1000;
+  const starsCount = 3000;
 
   const vertices = useMemo(() => {
     const v = new Float32Array(starsCount * 3);
     for (let i = 0; i < starsCount * 3; i++) {
-      v[i] = MathUtils.randFloatSpread(100);
+      v[i] = MathUtils.randFloatSpread(275);
     }
     return v;
   }, [starsCount]);
