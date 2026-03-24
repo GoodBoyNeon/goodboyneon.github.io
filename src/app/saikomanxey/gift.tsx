@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { jetBrainsMono } from "../fonts";
 
 const C = {
   box: "oklch(63.7% 0.237 25.331)",
@@ -13,7 +14,7 @@ const C = {
   border: "#EAD9C0",
 };
 
-const THRESHOLD = 136;
+const THRESHOLD = 150;
 
 // ─── Bow (SVG) ──────────────────────────────────────────────────────────────
 function Bow({ size = 72 }) {
@@ -230,16 +231,9 @@ export default function GiftBox({
               {/* Pull hint */}
               {phase === "idle" && (
                 <div
+                  className={`${jetBrainsMono.className} absolute top-[-26] left-[50%] text-xs font-bold tracking-widest whitespace-nowrap`}
                   style={{
-                    position: "absolute",
-                    top: -26,
-                    left: "50%",
-                    fontSize: 11,
-                    fontFamily: "sans-serif",
-                    fontWeight: 700,
-                    letterSpacing: "0.12em",
                     color: C.ribD,
-                    whiteSpace: "nowrap",
                     animation: "hintFloat 1.5s ease-in-out infinite",
                   }}
                 >
@@ -248,7 +242,7 @@ export default function GiftBox({
               )}
 
               {/* Bow */}
-              <div style={{ marginBottom: 0 }}>
+              <div className="mb-0">
                 <Bow size={72} />
               </div>
 
@@ -286,27 +280,19 @@ export default function GiftBox({
         </div>
 
         {/* ── Pull progress bar ──────────────────── */}
-        {phase === "pulling" && (
-          <div
-            style={{
-              marginTop: "1.1rem",
-              width: "100px",
-              height: 4,
-              borderRadius: 9999,
-              background: "#E8D9C0",
-              overflow: "hidden",
-            }}
-          >
+        {phase === "pulling" ? (
+          <div className="mt-4 h-1 w-24 overflow-hidden rounded-full bg-[#e8d9c0]">
             <div
+              className="h-full rounded-full"
               style={{
-                height: "100%",
-                borderRadius: 9999,
                 background: C.rib,
                 width: `${Math.min(100, (delta / THRESHOLD) * 100)}%`,
                 transition: "width 0.04s linear",
               }}
             />
           </div>
+        ) : (
+          <div className="mt-4 h-1 w-24"></div>
         )}
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useRef, useState } from "react";
-import { comic, pacifico, rubik, titanOne } from "../fonts";
+import { comic, jetBrainsMono, pacifico, rubik, titanOne } from "../fonts";
 import CornerBanner from "./flag";
 import GiftBox from "./gift";
 import Msg from "./msg";
@@ -243,138 +243,178 @@ export default function ForMiss() {
           </AnimatePresence>
 
           {showMain && (
-            <div className="">
-              <motion.div
-                initial={{ y: -200 }}
-                animate={{ y: 0 }}
-                transition={{
-                  duration: 0.4,
-                }}
-              >
-                <CornerBanner side="left" width={160} height={160} flagCount={6} />
-                <CornerBanner side="right" width={160} height={160} flagCount={6} />
-              </motion.div>
-
-              <div className="flex items-center justify-center px-12 pt-36 text-center">
+            <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
+              <div className="min-h-screen snap-center snap-always">
                 <motion.div
-                  initial={{ y: -200, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    duration: 0.8,
-                    delay: 0.6,
-                    stiffness: 120,
-                    damping: 10,
-                    mass: 0.8,
-                  }}
-                >
-                  <div className="flex items-center gap-3 px-3 py-2 text-5xl">
-                    <motion.div
-                      animate={{
-                        rotate: [-18, 18, -18],
-                      }}
-                      transition={{
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        duration: 1.2,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      🎉
-                    </motion.div>
-                    <div className={`text-center ${rubik.className}`}>
-                      <span className="bg-gradient-to-r from-rose-700 via-purple-600 to-cyan-600 bg-clip-text font-extrabold text-transparent">
-                        HAPPY BIRTHDAY
-                      </span>{" "}
-                      <div className="relative inline-block text-5xl leading-none font-extrabold">
-                        <span className="absolute top-0 left-0 translate-y-[1px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                          AAKRITI
-                        </span>
-                        <span className="absolute top-0 left-0 translate-y-[2px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                          AAKRITI
-                        </span>
-                        <span className="absolute top-0 left-0 translate-y-[3px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                          AAKRITI
-                        </span>
-                        <span className="absolute top-0 left-0 translate-y-[3px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                          AAKRITI
-                        </span>
-
-                        <span className="relative text-purple-950">AAKRITI</span>
-                        {[...Array(24)].map((_, i) => (
-                          <motion.span
-                            suppressHydrationWarning
-                            key={i}
-                            className="absolute h-1 w-1 rounded-full bg-white opacity-0"
-                            style={{
-                              top: `${Math.random() * 100}%`,
-                              left: `${Math.random() * 100}%`,
-                            }}
-                            animate={{
-                              opacity: [0, 1, 0],
-                              scale: [0.5, 1.2, 0.5],
-                              rotate: [0, 360],
-                            }}
-                            transition={{
-                              repeat: Infinity,
-                              repeatType: "loop",
-                              duration: 1 + Math.random(), // random duration for fun
-                              delay: Math.random() * 1, // random stagger
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <motion.div
-                      animate={{
-                        rotate: [-18, 18, -18],
-                      }}
-                      transition={{
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        duration: 1.2,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      🎉
-                    </motion.div>
-                  </div>
-                </motion.div>
-              </div>
-              <div className="px-3 py-12">
-                <motion.div
-                  className={`font rounded-lg border-2 border-violet-300 bg-pink-50 px-2 py-3 text-center text-xl text-violet-950 drop-shadow-lg ${pacifico.className} mx-6 flex items-center justify-center text-center`}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    delay: 1.4,
-                    duration: 1,
-                    stiffness: 500,
-                    damping: 20,
-                  }}
-                >
-                  <p>
-                    💫 Wishing you a really joyful birthday! It&apos;s the day to
-                    celebrate you and everything you are... So enjoy it to the
-                    fullest~! 🧿
-                  </p>
-                </motion.div>
-              </div>
-              <div className="relative flex items-center justify-center pt-28 pb-12">
-                <motion.div
-                  initial={{ y: "100vh" }}
+                  className="relative"
+                  initial={{ y: -200 }}
                   animate={{ y: 0 }}
                   transition={{
-                    type: "spring",
-                    stiffness: 80,
-                    damping: 15,
-                    duration: 1.2,
-                    delay: 2,
+                    duration: 0.4,
                   }}
                 >
-                  <GiftBox isGiftOpen={isGiftOpen} setIsGiftOpen={setIsGiftOpen} />
+                  <CornerBanner side="left" width={160} height={160} flagCount={6} />
+                  <CornerBanner
+                    side="right"
+                    width={160}
+                    height={160}
+                    flagCount={6}
+                  />
                 </motion.div>
+
+                <div className="flex items-center justify-center px-12 pt-36 text-center">
+                  <motion.div
+                    initial={{ y: -200, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      type: "spring",
+                      duration: 0.8,
+                      delay: 0.6,
+                      stiffness: 120,
+                      damping: 10,
+                      mass: 0.8,
+                    }}
+                  >
+                    <div className="flex items-center gap-3 px-3 py-2 text-5xl">
+                      <motion.div
+                        animate={{
+                          rotate: [-18, 18, -18],
+                        }}
+                        transition={{
+                          repeat: Infinity,
+                          repeatType: "loop",
+                          duration: 1.2,
+                          ease: "easeInOut",
+                        }}
+                      >
+                        🎉
+                      </motion.div>
+                      <div className={`text-center ${rubik.className}`}>
+                        <span className="bg-gradient-to-r from-rose-700 via-purple-600 to-cyan-600 bg-clip-text font-extrabold text-transparent">
+                          HAPPY BIRTHDAY
+                        </span>{" "}
+                        <div className="relative inline-block text-5xl leading-none font-extrabold">
+                          <span className="absolute top-0 left-0 translate-y-[1px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                            AAKRITI
+                          </span>
+                          <span className="absolute top-0 left-0 translate-y-[2px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                            AAKRITI
+                          </span>
+                          <span className="absolute top-0 left-0 translate-y-[3px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                            AAKRITI
+                          </span>
+                          <span className="absolute top-0 left-0 translate-y-[3px] bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                            AAKRITI
+                          </span>
+
+                          <span className="relative text-purple-950">AAKRITI</span>
+                          {[...Array(24)].map((_, i) => (
+                            <motion.span
+                              suppressHydrationWarning
+                              key={i}
+                              className="absolute h-1 w-1 rounded-full bg-white opacity-0"
+                              style={{
+                                top: `${Math.random() * 100}%`,
+                                left: `${Math.random() * 100}%`,
+                              }}
+                              animate={{
+                                opacity: [0, 1, 0],
+                                scale: [0.5, 1.2, 0.5],
+                                rotate: [0, 360],
+                              }}
+                              transition={{
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                duration: 1 + Math.random(), // random duration for fun
+                                delay: Math.random() * 1, // random stagger
+                              }}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      <motion.div
+                        animate={{
+                          rotate: [-18, 18, -18],
+                        }}
+                        transition={{
+                          repeat: Infinity,
+                          repeatType: "loop",
+                          duration: 1.2,
+                          ease: "easeInOut",
+                        }}
+                      >
+                        🎉
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                </div>
+                <div className="px-3 py-12">
+                  <motion.div
+                    className={`font rounded-lg border-2 border-violet-300 bg-pink-50 px-2 py-3 text-center text-xl text-violet-950 drop-shadow-lg ${pacifico.className} mx-6 flex items-center justify-center text-center`}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{
+                      type: "spring",
+                      delay: 1.4,
+                      duration: 1,
+                      stiffness: 500,
+                      damping: 20,
+                    }}
+                  >
+                    <p>
+                      💫 Wishing you a really joyful birthday! It&apos;s the day to
+                      celebrate you and everything you are... So enjoy it to the
+                      fullest~! 🧿
+                    </p>
+                  </motion.div>
+                </div>
+                <div>
+                  <motion.div
+                    className={`${jetBrainsMono.className} mt-4 text-center text-amber-600 text-shadow-xs`}
+                    initial={{ y: "100vh" }}
+                    animate={{ y: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 80,
+                      damping: 15,
+                      duration: 1.6,
+                      delay: 3,
+                      ease: "easeOut",
+                    }}
+                  >
+                    <motion.p
+                      animate={{ y: [0, -15, 0] }}
+                      transition={{
+                        duration: 1.5,
+                        ease: "easeInOut",
+                        stiffness: 80,
+                        damping: 15,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                      }}
+                    >
+                      ↓ SCROLL DOWN ↓
+                    </motion.p>
+                  </motion.div>
+                </div>
+              </div>
+
+              <div className="flex min-h-screen snap-center snap-always items-center justify-center">
+                <div className="relative flex items-center justify-center pt-28 pb-12">
+                  <motion.div
+                    initial={{ y: "100vh" }}
+                    animate={{ y: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 80,
+                      damping: 15,
+                      duration: 1.2,
+                      delay: 2,
+                    }}
+                  >
+                    <GiftBox isGiftOpen={isGiftOpen} setIsGiftOpen={setIsGiftOpen} />
+                  </motion.div>
+                </div>
               </div>
             </div>
           )}

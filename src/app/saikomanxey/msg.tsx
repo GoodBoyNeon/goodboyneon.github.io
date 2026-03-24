@@ -17,15 +17,15 @@ I'm sorry this message couldn't be very long. I lack the words to describe the t
 ~ Sushant
 `;
   return (
-    <div className="mx-auto w-full max-w-2xl px-4 sm:px-6">
+    <div className="mx-auto w-full max-w-2xl px-4">
       <div className="rounded-2xl border-2 border-rose-200 bg-gradient-to-b from-white to-rose-50 p-6 shadow-2xl sm:p-8 md:p-10">
         <div className="mb-6 flex justify-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-amber-400" />
-          <div className="h-3 w-3 rounded-full bg-purple-400" />
-          <div className="h-2 w-2 rounded-full bg-amber-400" />
+          <div className="h-2 w-2 rounded-full bg-amber-500" />
+          <div className="h-3 w-3 rounded-full bg-violet-400" />
+          <div className="h-2 w-2 rounded-full bg-amber-500" />
         </div>
 
-        <div className="prose prose-sm sm:prose max-w-none">
+        <div className="prose prose-sm max-w-none">
           <p
             className={`text-center font-serif text-base leading-relaxed whitespace-pre-line text-amber-950 sm:text-lg ${serif.className}`}
           >
@@ -34,9 +34,9 @@ I'm sorry this message couldn't be very long. I lack the words to describe the t
         </div>
 
         <div className="flex justify-center gap-2 pt-2">
-          <div className="h-2 w-2 rounded-full bg-amber-400" />
-          <div className="h-3 w-3 rounded-full bg-purple-400" />
-          <div className="h-2 w-2 rounded-full bg-amber-400" />
+          <div className="h-2 w-2 rounded-full bg-amber-500" />
+          <div className="h-3 w-3 rounded-full bg-violet-400" />
+          <div className="h-2 w-2 rounded-full bg-amber-500" />
         </div>
       </div>
     </div>
