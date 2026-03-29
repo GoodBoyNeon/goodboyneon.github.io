@@ -1,10 +1,10 @@
-import { firaSans } from './fonts';
-import type { Metadata } from 'next';
-import './globals.css';
+import { firaSans } from "./fonts";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Neon The Developer',
-  description: "Welcome to Neon's Portfolio!",
+  title: "Sushant Ray",
+  description: "Welcome to Sushant's Portfolio!",
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

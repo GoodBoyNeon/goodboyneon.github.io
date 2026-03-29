@@ -6,11 +6,16 @@ import {
   IBM_Plex_Serif,
   JetBrains_Mono,
   Lobster,
+  Noto_Sans,
   Pacifico,
   Rubik,
   Titan_One,
 } from "next/font/google";
 
+export const notoSans = Noto_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 export const firaSans = Fira_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
