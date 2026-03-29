@@ -1,63 +1,48 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Octokit } from 'octokit';
-import { useEffect, useState } from 'react';
-import { AiFillGithub, AiFillHeart } from 'react-icons/ai';
-import { BiGitRepoForked, BiStar } from 'react-icons/bi';
-import { jetBrainsMono } from '../app/fonts';
+import Link from "next/link";
+import { useState } from "react";
+import { AiFillGithub, AiFillHeart } from "react-icons/ai";
+import { BiStar } from "react-icons/bi";
+import { jetBrainsMono } from "../app/fonts";
 
 type GitStats = {
   stars?: number;
-  forks?: number;
 };
 
 const Footer = () => {
-  const [{ stars, forks }, setGitStats] = useState<GitStats>({
+  const [{ stars }, setGitStats] = useState<GitStats>({
     stars: undefined,
-    forks: undefined,
-  });
+  }); /* Show stars when I actually have some lol */
 
-  useEffect(() => {
-    const octokit = new Octokit();
-    octokit.rest.repos
-      .get({
-        owner: 'goodboyneon',
-        repo: 'goodboyneon.github.io',
-      })
-      .then(({ data: { stargazers_count: stars, forks_count: forks } }) => {
-        setGitStats({ stars, forks });
-      });
-  }, []);
+  // useEffect(() => {
+  //   const octokit = new Octokit();
+  //   octokit.rest.repos
+  //     .get({
+  //       owner: "goodboyneon",
+  //       repo: "goodboyneon.github.io",
+  //     })
+  //     .then(({ data: { stargazers_count: stars } }) => {
+  //       setGitStats({ stars });
+  //     });
+  // }, []);
 
   return (
     <footer>
-      <div className="flex flex-col items-center justify-center bg-background">
-        <hr className=" h-px w-screen border-0 bg-bg-light text-bg-light" />
+      <div className="bg-background flex flex-col items-center justify-center">
+        <hr className="bg-bg-light text-bg-light h-px w-screen border-0 text-center" />
         <Link
-          className={`${jetBrainsMono.className} mt-4 flex flex-col items-center justify-center text-subtext transition-all duration-300 hover:text-primary`}
-          href={'https://github.com/goodboyneon/goodboyneon.github.io'}
+          className={`${jetBrainsMono.className} text-subtext hover:text-primary mt-4 flex flex-col items-center justify-center text-center transition-all duration-300`}
+          href={"https://github.com/goodboyneon/goodboyneon.github.io"}
         >
-          <div className="flex flex-row space-x-1 align-middle">
-            <span className="flex gap-2">
-              <AiFillGithub size={20} className="" />
-            </span>
-            <span className="align-bottom">Made with</span>
-            <AiFillHeart size={20} /> <span className="align-bottom">by Neon!</span>
-          </div>
-          <div className="flex w-20 justify-between gap-4 font-normal">
-            <span className="flex flex-row gap-1">
-              <BiStar size={20} />
-              <span>{stars && stars}</span>
-            </span>
-            <span className="flex flex-row gap-1">
-              <BiGitRepoForked size={20} />
-              <span>{forks && forks}</span>
-            </span>
+          <div className="flex items-center gap-2">
+            <AiFillGithub size={20} />
+            <span>Made with</span> <AiFillHeart size={20} />
+            <span>by Neon!</span>
           </div>
         </Link>
       </div>
-      <p className="pb-1 pr-2 text-right text-subtext">&copy; All rights reserved</p>
+      <p className="text-subtext pr-2 pb-1 text-right">&copy; All rights reserved</p>
     </footer>
   );
 };
