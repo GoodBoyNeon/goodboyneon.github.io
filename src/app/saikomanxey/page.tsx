@@ -200,7 +200,7 @@ export default function ForMiss() {
                     className={`absolute inset-0 rounded-full bg-linear-to-r from-pink-400 to-rose-400 opacity-0 blur-xl transition-opacity duration-300`}
                     style={{ pointerEvents: "none" }}
                   />
-                  hmm...
+                  Mm...
                 </button>
               </div>
             </FSMPopUp>
