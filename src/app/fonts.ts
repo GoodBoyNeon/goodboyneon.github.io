@@ -56,4 +56,5 @@ export const lobster = Lobster({
 export const serif = IBM_Plex_Serif({
   weight: ["400", "500"],
   subsets: ["latin"],
+  style: ["italic", "normal"],
 });
