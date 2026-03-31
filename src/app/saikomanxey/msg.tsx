@@ -16,7 +16,7 @@ Anyway..
 
 Thanks for always bringing out my better side. With you, I met the happiest version of myself, that not even I was aware existed. It is a pleasure I can never pay the price of to have you in my life. So on this day where we celebrate the beautiful human being as yourself, please accept my wishes grandly, and if you can, please forgive me for all the trouble I may have caused you, though I never intended to.
 
-There's this quote, one of my all-time-favorites, from the book "The Kite Runner", and it reads;
+There's this quote, one of my all-time favorites, from the book "The Kite Runner," and it reads,
 `,
 
     `
@@ -25,7 +25,11 @@ There's this quote, one of my all-time-favorites, from the book "The Kite Runner
     `
 When I read that for the first time, no one really came to mind. But now whenever I am thinking of it, I'm reminded of you. Maybe it is mortifying or "cringe", but it's true.
 
-I'm sorry this message couldn't be very long. I lack the words to describe the things I wish to say to you... With that said, be forever happy and best of luck for a flourishing future ahead. Happy birthday once again, and go conquer the world!
+With that said, thank you again for being the best part of my life. I do not intend to start`,
+    ` that `,
+    `topic again, but please be a part of me till the very end.
+
+I'm sorry this message couldn't be very long. I lack the words to describe the things I wish to say to you... Be forever happy and best of luck for a bright and flourishing future ahead. Best wishes for your exams. Happy birthday once again, and go conquer the world!
 `,
     `
 ~ Sushant
@@ -45,11 +49,13 @@ I'm sorry this message couldn't be very long. I lack the words to describe the t
           <p
             className={`text-center font-serif text-base leading-relaxed whitespace-pre-line text-amber-950 sm:text-lg ${serif.className}`}
           >
-            <span className="font-medium italic">{message[0]}</span>
+            <span className="font-medium text-amber-900 italic">{message[0]}</span>
             {message[1]}
             <span className="font-medium italic">{message[2]}</span>
             {message[3]}
-            <span className="text-right">{message[4]}</span>
+            <span className="italic">{message[4]}</span>
+            {message[5]}
+            <span className="text-black">{message[6]}</span>
           </p>
         </div>
 
